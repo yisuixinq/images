@@ -1,0 +1,833 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Frameset//EN"> <html><!--
+ Page saved with SingleFile 
+ url: https://xbeta.info/tc-help/totalcmd/IniSettings.htm 
+ saved date: Wed Jun 22 2022 19:28:05 GMT+0800 (中国标准时间)
+--><!--(==============================================================)--><!--(Document created with RoboEditor. )============================--><!--(==============================================================)--><meta charset=utf-8>
+<title>Ini文件设置</title>
+<meta name=copyright value="Copyright ?1993-2006 by Christian Ghisler">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=0>
+<meta name=layout-height content=0>
+<meta name=layout-width content=0>
+<style>P{margin-top:0.00pt;margin-bottom:0.00pt;text-align:left;font-family:"Arial";font-size:10pt}P.Normal-1{margin-top:0.00pt;margin-bottom:0.00pt;text-align:left;font-family:"Arial";font-size:10pt}P.Standard---{margin-top:0.00pt;margin-bottom:0.00pt;text-align:left;font-family:"Arial";font-size:10pt}BODY{font-family:"Arial";font-size:10pt}body{background-color:window}a:link{color:#008000;text-decoration:none}a:visited{color:#800000;text-decoration:none}a:active{color:#008000;text-decoration:underline}a:hover{color:#008000;text-decoration:underline}._th-container ._th-item{margin-bottom:3px;position:relative;width:0;height:0;cursor:pointer;opacity:.3;background-color:aquamarine;border-radius:100%;text-align:center;line-height:30px;-webkit-transition:all .35s;-o-transition:all .35s;transition:all .35s;right:30px}._th-container ._th-item,._th-container ._th-click-hover,._th_cover-all-show-times ._th_times{-webkit-box-shadow:-3px 4px 12px -5px black;box-shadow:-3px 4px 12px -5px black}._th-container:hover ._th-item._item-x2{margin-left:18px;width:40px;height:40px;line-height:40px}._th-container:hover ._th-item._item-x-2{margin-left:17px;width:38px;height:38px;line-height:38px}._th-container:hover ._th-item._item-xx2{width:36px;height:36px;margin-left:16px;line-height:36px}._th-container:hover ._th-item._item-xx-2{width:32px;height:32px;line-height:32px;margin-left:14px}._th-container:hover ._th-item._item-reset{width:30px;line-height:30px;height:30px;margin-left:10px}._th-click-hover{position:relative;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s;height:45px;width:45px;cursor:pointer;opacity:.3;border-radius:100%;background-color:aquamarine;text-align:center;line-height:45px;right:0}._th-container:hover{left:-5px}._th-container{font-size:12px;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s;left:-35px;top:20%;position:fixed;-webkit-box-sizing:border-box;box-sizing:border-box;z-index:100000;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}._th-container ._th-item:hover{opacity:.8;background-color:#5fb492;color:aliceblue}._th-container ._th-item:active{opacity:.9;background-color:#1b3a26;color:aliceblue}._th-container:hover ._th-click-hover{opacity:.8}._th-container:hover ._th-item{opacity:.6;right:0}._th-container ._th-click-hover:hover{opacity:.8;background-color:#5fb492;color:aliceblue}._th_cover-all-show-times{position:fixed;top:0;right:0;width:100%;height:100%;font-weight:900;font-size:30px;color:#4f4f4f;background-color:rgba(0,0,0,0.1)}._th_cover-all-show-times._th_hidden{z-index:-99999;opacity:0;-webkit-transition:1s all;-o-transition:1s all;transition:1s all}._th_cover-all-show-times ._th_times{width:300px;height:300px;border-radius:50%;background-color:rgba(127,255,212,0.51);text-align:center;line-height:300px;position:absolute;top:50%;right:50%;margin-top:-150px;margin-right:-150px}</style><link type=image/x-icon rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABRvaMAQc10AAGNcgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQc10AFHdehBh7X4QYe2P8GHtj/Bh7Y/wYe2P8GHtj/BR3Y0QUd16EFG9owAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUb2jAFHdfBBh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8FHdjRBRvaMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFHddgBh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/BR7YcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABR3XYAYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7XgQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUb2jAGHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/BR3XYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABR3XwQYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8FHtjxABDfEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQc10AGHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8FHdehAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABR3XoQYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8AGNcgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFHtjxBh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe14EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABRvaMAYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/BR3Y0QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEHNdABh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/ABDfEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ3xAFHdmfBR7Y7wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y3wYe2X4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABRvaMAUe2V4GHtl+BR3YvwUd2L8FHtjvBh7Y/wYe2P8GHtj/Bh7Y/wYe2P8GHtj/Bh7Y/wYe2P8FHtjvBR3YvwYd2K8GHtl+BR7ZXgAY1yAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ3xAGHteBBR7YcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABDfEAYe14EFHthwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABR3XwQYe2P8GHtj/BR3XYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFHdehBh7Y/wYe2P8GHteBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUb2jAGHtj/Bh7Y/wYe2P8FHdfBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYe2P8GHtj/Bh7Y/wUe2PEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBzXQAYe2P8GHtj/Bh7Y/wYe2P8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEHNdABh7Y/wYe2P8GHtj/Bh7Y/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFG9owBh7Y/wYe2P8GHtj/BR7YzwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ3xAGHtj/Bh7Y/wYe2P8FHtjvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGHtfhBh7Y/wYe2P8GHteBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUd18EGHtj/Bh7Y/wUd16EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUb2jAGHdivBh7ZfgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABDfEAUd2Z8FHdmfABDfEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////AH///AAf//gAD//wAAP/4AAD/8AAAf/AAAD/gAAA/4AAAH+AAAB/gAAAf4AAAP/8AA//////////////////////////////////7//3/8f/4f/D/+H/w//h/8P/4f/D/+H/7//z////////////////8="><style>.sf-hidden{display:none!important}</style><link rel=canonical href=https://xbeta.info/tc-help/totalcmd/IniSettings.htm><meta http-equiv=content-security-policy content="default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:;"><style>img[src="data:,"],source[src="data:,"]{display:none!important}</style><body style=color:#000000><remove-web-limits-iqxin id=rwl-iqxin class=rwl-exempt style=position:fixed;top:2px;left:0px><qxinbutton type=qxinbutton id=rwl-setbtn> set </qxinbutton> <lalala style=cursor:move;font-size:12px>限制解除</lalala> <input type=checkbox name id=black_node><style class=sf-hidden>#rwl-iqxin{transform:translate(-95px,0);width:85px;height:25px;font-size:12px;font-weight:500;font-family:Verdana,Arial,"宋体";color:#fff;background:#333;z-index:2147483647;margin:0;opacity:0.05;transition:0.3s;overflow:hidden;user-select:none;text-align:center;white-space:nowrap;line-height:25px;padding:0 16px;border:1px solid #ccc;border-width:1px 1px 1px 0;border-bottom-right-radius:5px;box-sizing:content-box}#rwl-iqxin input{margin:0;padding:0;vertical-align:middle;-webkit-appearance:checkbox;-moz-appearance:checkbox;position:static;clip:auto;opacity:1;cursor:pointer}#rwl-iqxin #rwl-setbtn{margin:0 4px 0 0;padding:0 0 0 4px;border:none;border-radius:2px;cursor:pointer;background:#fff;color:#000}</style></remove-web-limits-iqxin>
+<p><span style=font-size:14pt;font-weight:bold>wincmd.ini</span><span style=font-size:14pt;font-weight:bold><font style=font-family:宋体 face=宋体>中的设置</font></span></p>
+<p style=margin-top:0;margin-bottom:0>&nbsp;</p>
+<p class=Standard---><font style=font-family:宋体 face=宋体>请注意：</font>Wincmd.ini<font style=font-family:宋体 face=宋体>的多数设置也可以在对话框中修改。某些设置必须直接修改，因为它们不面向最终用户，或它们只用于解决特定问题。</font>FTP<font style=font-family:宋体 face=宋体>客户端设置保存在文件</font> <a href=https://xbeta.info/tc-help/totalcmd/wcx_ftp_INI_settings.htm>wcx_ftp.ini</a> 
+ <font style=font-family:宋体 face=宋体>中。</font></p>
+<p class=Standard---><span style=font-weight:bold><font style=font-family:宋体 face=宋体>注意</font></span><span style=font-weight:bold>:</span> <font style=font-family:宋体 face=宋体>这两个</font>INI<font style=font-family:宋体 face=宋体>文件的位置可通过菜单 帮助－关于Total Commander查看。INI文件的位置可在安装过程中指定（保存在注册表），或通过</font> <a href=https://xbeta.info/tc-help/totalcmd/CommandLineParameters.htm><font style=font-family:宋体 face=宋体>命令行参数</font></a> <font style=font-family:宋体 face=宋体>指定。一个可以改变INI位置的单独程序</font>(inireloc.exe)<font style=font-family:宋体 face=宋体>可在</font><a target=_blank href=http://www.ghisler.com/><b>www.ghisler.com</b></a><font style=font-family:宋体 face=宋体>的</font>Addons<font style=font-family:宋体 face=宋体>找到。另外，如果</font>wincmd.ini<font style=font-family:宋体 face=宋体>位于</font>Total Commander<font style=font-family:宋体 face=宋体>程序文件夹，可以利用配置项</font>UseIniInProgramDir<font style=font-family:宋体 face=宋体>（见下文）。</font></p>
+<p class=Standard--- style=margin-top:0;margin-bottom:0>&nbsp;</p>
+<p class=Standard--- style=margin-left:170.10pt;text-indent:-170.10pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[Configuration]</span><font style=font-family:宋体 face=宋体>一般设置</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">1hourdif=0&nbsp;</span><font style=font-family:宋体 face=宋体>1：比较文件时忽略</font>1<font style=font-family:宋体 face=宋体>小时的时差。在比较</font>NTFS <font style=font-family:宋体 face=宋体>和</font> FAT <font style=font-family:宋体 face=宋体>分区（夏令时！）的文件时有用。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">AccessTime=0&nbsp;</span><font style=font-family:宋体 face=宋体>1：允许</font>Total Commander<font style=font-family:宋体 face=宋体>按</font>'<font style=font-family:宋体 face=宋体>上次访问</font>'<font style=font-family:宋体 face=宋体>时间标签处理文件，而不是</font>'<font style=font-family:宋体 face=宋体>上次修改</font>'<font style=font-family:宋体 face=宋体>时间，例如，用于复制过去</font>n<font style=font-family:宋体 face=宋体>天以内访问过的文件。</font> </p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ActiveRight=0&nbsp;</span><font style=font-family:宋体 face=宋体>1：Total Commander启动后右侧窗口是活动的</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">AdminShares=0&nbsp;</span><font style=font-family:宋体 face=宋体>1：总显示管理共享（如C$）。仅适用于基于WinNT的系统。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">AdminTimeout=180</span><font style=font-family:宋体 face=宋体>决定tcmadmin.exe在多少秒没有活动（以管理员身份复制/删除等）后退出。特殊值：
+<br>0：不超时
+<br>-1：禁止以管理员身份复制。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Aligned extension=1&nbsp;</span><font style=font-family:宋体 face=宋体>文件扩展名左对齐显示。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">AllHiddenNetNames=1</span><font style=font-family:宋体 face=宋体>0: 选择“显示系统共享文件夹”时仅显示C$这种隐藏驱动器<br>1: 显示所有隐藏共享文件夹
+</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Allowed=</span><font style=font-family:宋体 face=宋体>允许使用的驱动器</font> -&gt; <font style=font-family:宋体 face=宋体>限制驱动器访问！示例：</font>Allowed=cde<br>
+\ <font style=font-family:宋体 face=宋体>代表</font> '<font style=font-family:宋体 face=宋体>网络邻居</font>'</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">AllowSetCursorPos=1</span><font style=font-family:宋体 face=宋体>文件夹树视图中用鼠标展开大文件夹，如点击[+]时，光标的动作：
+<br>1: 光标移动以保留在展开的文件夹上<br>0: 光标不移动
+</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">AlternateUserIni=&lt;somename.ini&gt;</span><font style=font-family:宋体 face=宋体>如果本项存在，将用户可修改的配置保存到另一个文件（本例中是somename.ini），以下各节不转存：[Configuration], [Layout], [Packer], [Confirmation], [Extensions], [Associations], [Shortcuts], [ShortcutsWin], [PackerPlugins], [FileSystemPlugins], [ListerPlugins], [ContentPlugins]。<br>
+但是这些配置可单独转存：在每一节可添加RedirectSection=以改变默认行为。它决定是否将本节转存到其他ini：值：<br>0=不转存<br>1=存到AlternateUserIni=指定的文件<br>&lt;ininame&gt;=存到这个特定文件
+</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">AltSearch=0</span><font style=font-family:宋体 face=宋体>快速搜索方法：</font>0=CTRL+ALT，1=ALT，2=<font style=font-family:宋体 face=宋体>仅字母</font>，3=<font style=font-family:宋体 face=宋体>字母（使用快速搜索窗口）</font>，4=<font style=font-family:宋体 face=宋体>禁用</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">AlwaysAsAdmin=0</span><font style=font-family:宋体 face=宋体>1:有一次确认“总以管理员身份”后，之后所有操作均按管理员身份进行</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">AlwaysCopyInBackground=0</span><font style=font-family:宋体 face=宋体>1：Total Commander<font style=font-family:宋体 face=宋体>总在后台复制文件<br>2: 总使用后台传输管理器</font></font></p><font style=font-family:宋体 face=宋体>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">AlwaysPackInBackground=0</span><font style=font-family:宋体 face=宋体>1：后台压缩zip文件<br>2：后台调用zip+外部压缩程序<br>3：类似2，但启动外部压缩程序后最小化</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">AlwaysToRoot=0</span><font style=font-family:宋体 face=宋体>如果为1，Total Commander改变驱动器后总是切换到根目录（如同</font>Win95/98<font style=font-family:宋体 face=宋体>的</font>Explorer<font style=font-family:宋体 face=宋体>）。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">AlwaysUnpackInBackground=0</span><font style=font-family:宋体 face=宋体>1：后台解压zip<br>2：后台调用unzip+外部解压程序<br>3：类似2，但启动外部解压程序后最小化</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">AppendLnk=2</span><font style=font-family:宋体 face=宋体>快捷方式文件（*.lnk）按如下方式创建：<br>0：file.ext -&gt; file.lnk<br>
+1：file.ext -&gt; file.ext.lnk<br>
+2：对于文件，按方式0；对于文件夹，按方式1</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">AppendWarning=1</span><font style=font-family:宋体 face=宋体>如果为0，Total Commander在附加到文件时不显示警告。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">AutoComplete=3</span><font style=font-family:宋体 face=宋体>以下选项的组合（求和）：<br>1：显示自动完成下拉列表<br>
+2: 自动附加当前候选名字</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">AutoCompleteTab=0</span><font style=font-family:宋体 face=宋体>0：Tab键切换到活动窗口<br>
+1：从自动完成列表中选择下一个文件，如果没有候选文件，同'0'<br>2: 从自动完成列表中选择下一个文件，如果没有候选文件，忽略tab键</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">AutoInstallPlugins=1</span><font style=font-family:宋体 face=宋体>如果为0，进入插件压缩包时自动安装插件的功能被禁用。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Autotreechange=0</span><font style=font-family:宋体 face=宋体>如果为1，文件夹树显示方式下单击文件夹后，另一侧窗口切换到这个文件夹。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">BreadcrumbDelayButton=250</span><font style=font-family:宋体 face=宋体>为在路径下方显示按钮（用于打开子文件夹列表），鼠标在路径栏上停留的时间，毫秒。当使用负数时，文件夹列表立即显示（无需按钮）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">BreadcrumbDelayDir=250</span><font style=font-family:宋体 face=宋体>为展开普通文件夹，鼠标在展开文件夹区域必须停留的时间，毫秒。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">BreadcrumbDelayFtp=500</span><font style=font-family:宋体 face=宋体>同上，用于FTP连接</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">BreadcrumbDelayPlugin=500</span><font style=font-family:宋体 face=宋体>同上，用于文件系统插件</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">BreadcrumbDelayVirtual=500</span><font style=font-family:宋体 face=宋体>同上，用于虚拟文件夹，例如桌面</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">BreadCrumbMaxWidth=-1</span><font style=font-family:宋体 face=宋体>将路径导航栏文件夹列表的最大宽度限定到给定的像素值。<br>
+-1 代表屏幕宽度的一半。<br>
+宽度值最小100个像素，最大当前屏幕宽度。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">BreadcrumbSeparator=-3</span><font style=font-family:宋体 face=宋体>设置路径导航菜单中鼠标响应区域的开始位置（鼠标移入该区域才打开子菜单）：<br>
+0..100：区域开始位置的百分比数值。0=整个菜单<br>
+-1，-2等：从菜单右侧计算的分界线的绝对位置（行高的倍数）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">BriefViewWidthLimit=</span><font style=font-family:宋体 face=宋体>设置列表显示方式下列的最大宽度限值（像素）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">BrushForCursor=0</span><font style=font-family:宋体 face=宋体>如果</font>Total Commander<font style=font-family:宋体 face=宋体>移动光标时在未选中文件上留下外框痕迹（显卡的</font>bug<font style=font-family:宋体 face=宋体>），将此项置</font>1<font style=font-family:宋体 face=宋体>。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CdCloseDoor=1</span><font style=font-family:宋体 face=宋体>如果切换到</font>CD-rom<font style=font-family:宋体 face=宋体>失败，试图关闭</font>CD<font style=font-family:宋体 face=宋体>托盘。</font>CdCloseDoor=0<font style=font-family:宋体 face=宋体>禁用。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CDlabel=1</span><font style=font-family:宋体 face=宋体>按Alt+F1/F2时显示光盘（和其它可移动介质）的卷标</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CheckUsbHdd=1</span><font style=font-family:宋体 face=宋体>检查硬盘是否以USB连接（以确定是否显示为可移动磁盘图标）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ClearListBackground=1</span><font style=font-family:宋体 face=宋体>0：切换文件夹时抑制闪烁（不首先清除背景）<br>1: 清除背景（默认）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CmdUpDown=0</span><font style=font-family:宋体 face=宋体>即使活动窗口是命令行也可以在文件窗口上下移动光标</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CmtOemFont=0</span>descript.ion<font style=font-family:宋体 face=宋体>中使用</font>OEM (DOS) <font style=font-family:宋体 face=宋体>字符集（仅在你使用</font>4dos <font style=font-family:宋体 face=宋体>或</font> 4nt<font style=font-family:宋体 face=宋体>时才建议选择改项）。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ColorFilters=1</span><font style=font-family:宋体 face=宋体>允许</font>/<font style=font-family:宋体 face=宋体>禁止按文件类</font><font style=font-family:宋体 face=宋体>型定义显示颜色</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CompareAlwaysSaveWithBom=0</span><font style=font-family:宋体 face=宋体>1：比较文件内容时，如果保存UTF-8/16文件，总是添加一个字节序标志符(BOM)<br>0：仅当文件原本就包含BOM时才保存BOM</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CompareCaseSensitive=0</span><font style=font-family:宋体 face=宋体>1：比较文件内容时区分大小写字母<br>0：忽略</font> (a <font style=font-family:宋体 face=宋体>和</font> A <font style=font-family:宋体 face=宋体>视为相同</font>)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CompareDeleteBak=0</span><font style=font-family:宋体 face=宋体>1：关闭比较窗口时删除.bak文件</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CompareIgnoreRepeatedLines=0</span><font style=font-family:宋体 face=宋体>0：比较文件内容时忽略重复多次的文本行（例如，begin/end）。对于比较源代码和其他包含无需比较的重复文本的文件有用。<br>
+1：禁用。例如比较那些相关行经常重复的列表文件。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CompareIgnoreRepSpace=1</span><font style=font-family:宋体 face=宋体>1：忽略重复的空格，例如，</font>"a b" <font style=font-family:宋体 face=宋体>与</font> 
+ "a b"<font style=font-family:宋体 face=宋体>相同。<br>0：不同个数的空格视为差异</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CompareSaveOriginal=1</span><font style=font-family:宋体 face=宋体>1：保存文件时，原始文件复制到filename.bak，之后数据写到原始文件。优点：额外的数据流，特殊属性等得以保留。<br>0：保存文件时，数据写到filename.tmp，之后原始文件被重命名为filename.bak，最后filename.tmp再重命名为filename。优点：文件只写一次，出现写错误时原始文件不变。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Comparetool=</span><font style=font-family:宋体 face=宋体>为“比较文件内容”功能设置外部比较工具，例如，WinMerge</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CompareUtf8Detect=1</span><font style=font-family:宋体 face=宋体>决定“按内容比较文件”如何检测UTF-8文件：<br>0：仅按BOM（byte order marker）<br>1：按内容，至少存在一个多字节字符或UTF-8 HTML/XML文件头
+<br>2：如果没有无效的（非UTF-8）字节序列就认定为UTF-8文件</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CompareVertical=0</span><font style=font-family:宋体 face=宋体>1：按内容比较文件的窗口上下显示<br>0：并排显示</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ContextProgress=1</span><font style=font-family:宋体 face=宋体>按下鼠标右键出现右键菜单前显示进度条</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CopyComments=6</span><font style=font-family:宋体 face=宋体>以下标志的组合（求和）：<br>1：默认备注文件类型是</font>files.bbs<br><font style=font-family:宋体 face=宋体>2：默认备注文件类型是</font>descript.ion<br><font style=font-family:宋体 face=宋体>4：从两种备注文件读取备注<br>8：复制文件的备注。不复制备注文件自身。<br>16：为</font>descript.ion<font style=font-family:宋体 face=宋体>使用</font>DOS<font style=font-family:宋体 face=宋体>字符集</font> (files.bbs<font style=font-family:宋体 face=宋体>总使用</font>DOS<font style=font-family:宋体 face=宋体>字符集</font>)<span style=font-weight:bold><font style=font-family:宋体 face=宋体><br>
+注意</font></span><span style=font-weight:bold>:</span> <font style=font-family:宋体 face=宋体>如果</font>1 <font style=font-family:宋体 face=宋体>和</font> 2 <font style=font-family:宋体 face=宋体>都设置了，</font>2<font style=font-family:宋体 face=宋体>优先。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CopyCompatDrives=</span><font style=font-family:宋体 face=宋体>驱动器，TC复制文件涉及这些驱动器时将使用兼容模式。建议用于USB闪存盘和正常复制模式产生问题的驱动器。\ =网络邻居，*=所有驱动器。该模式对Windows 9X/ME无效。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CopyCompatUsbSticks=1</span><font style=font-family:宋体 face=宋体>对USB闪存盘使用兼容模式</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CopyDefaultMethod=1</span><font style=font-family:宋体 face=宋体>在NT类系统上总使用默认复制方式（当前是兼容模式）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CopyDirsAsAdmin=1</span><font style=font-family:宋体 face=宋体>当文件夹无法复制时：<br>
+0：跳过<br>
+1：询问用户如何做<br>
+2：总试图使用管理员身份复制</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CopyDirTimeStamp=0</span><font style=font-family:宋体 face=宋体>复制文件夹的时间标签</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CopyOverwriteDefault=0</span><font style=font-family:宋体 face=宋体>1..8：设置F5复制对话框中点击“选项”按钮后的默认选项（仅用于打开扩展的复制对话框时）。数字对应对话框的选项。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CopyToDirWarn=1</span><font style=font-family:宋体 face=宋体>1：F5 复制: 如果用户输入的目标文件名是一个已存在的文件夹的名字，提示用户</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CopyStreams=0</span><font style=font-family:宋体 face=宋体>1：复制</font>NTFS<font style=font-family:宋体 face=宋体>数据流<br>0：忽略</font>NTFS<font style=font-family:宋体 face=宋体>数据流</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CopyBlockSize=32</span><font style=font-family:宋体 face=宋体>设置复制文件时的缓存大小（单位KB）。默认和最小值是32（=32768 字节）。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CopyHugeBlockSize=</span><font style=font-family:宋体 face=宋体>设置复制大文件时的缓存大小。文件将直接读写，越过</font><font style=font-family:宋体 face=宋体>磁盘缓冲。最小值是</font>10MB<font style=font-family:宋体 face=宋体>。仅复制大于此数值的文件时才使用这种方法。对于小文件</font>CopyBlockSize<font style=font-family:宋体 face=宋体>有效。默认</font>INI<font style=font-family:宋体 face=宋体>文件中没有这一项，此特性是禁用的。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CopyBlockSizeOther=32</span><font style=font-family:宋体 face=宋体>设置不同物理磁盘之间复制文件时的缓存大小。最好用小一点的缓存，因为两个磁盘可以同时读写。同一磁盘内复制时磁头必须在源文件和目标文件之间来回跳，因此缓存大些好。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CopyHugeBlockSizeOther=</span><font style=font-family:宋体 face=宋体>设置不同物理磁盘之间复制大文件时的缓存大小。最小：</font>256 kB<font style=font-family:宋体 face=宋体>。</font><font style=font-family:宋体 face=宋体>建议值（自己试试其他值）：<br>
+CopyBlockSize=1024<br>
+CopyHugeBlockSize=10240<br>
+CopyBlockSizeOther=128<br>
+CopyHugeBlockSizeOther=32</font></p><font style=font-family:宋体 face=宋体>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SamePartitions=drives,drives</span><font style=font-family:宋体 face=宋体>能够设置哪些逻辑驱动器</font>(<font style=font-family:宋体 face=宋体>分区</font>) <font style=font-family:宋体 face=宋体>属于同一硬盘。例如</font>: 
+ <font style=font-family:宋体 face=宋体>你有两个硬盘，一个分区C，E和F，另一个分区D，G和H。此项写为</font>SamePartitions=CEF,DGH<font style=font-family:宋体 face=宋体><br>
+在分区</font>E <font style=font-family:宋体 face=宋体>和</font> F (<font style=font-family:宋体 face=宋体>同一物理硬盘</font>) 
+ <font style=font-family:宋体 face=宋体>之间复制文件时，使用前两项设置，</font>C <font style=font-family:宋体 face=宋体>和</font> D (<font style=font-family:宋体 face=宋体>不同硬盘</font>) <font style=font-family:宋体 face=宋体>之间</font><font style=font-family:宋体 face=宋体>复制文件时使用名字带</font> 
+ 'Other'<font style=font-family:宋体 face=宋体>的选项的数值。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CountMarked=1</span><font style=font-family:宋体 face=宋体>1：复制</font>/<font style=font-family:宋体 face=宋体>删除文件前计算子文件夹中所有文件占用的磁盘空间，这样会出现第</font>2<font style=font-family:宋体 face=宋体>个进度条<br>0：不计算文件空间</font> (<font style=font-family:宋体 face=宋体>更快</font>)</p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CountSpace=1</span><font style=font-family:宋体 face=宋体>1：用空格键选择文件后计算空间<br>0：不计算文件空间</font> (<font style=font-family:宋体 face=宋体>更快</font>)</p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CtrlArrow=1</span><font style=font-family:宋体 face=宋体>1：编辑框（如命令行）中使用内部的Ctrl+方向键移动方式<br>0：使用Windows默认方式</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CustomFieldsInDlg=0</span><font style=font-family:宋体 face=宋体>在替换对话框中显示自定义属性（例如[tc.comment]）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">DeleteDelay=0</span>Total 
+ Commander<font style=font-family:宋体 face=宋体>将文件删除到回收站后等待指定时间（毫秒）。如果你在</font>cleansweep<font style=font-family:宋体 face=宋体>运行时删除文件出现问题，试试增加这个数值</font>(<font style=font-family:宋体 face=宋体>默认</font>0)<font style=font-family:宋体 face=宋体>。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">DeviceChange=1</span>1= 
+ <font style=font-family:宋体 face=宋体>响应</font>wm_devicechange<font style=font-family:宋体 face=宋体>消息</font> (<font style=font-family:宋体 face=宋体>以检测驱动器变化</font>) 0= <font style=font-family:宋体 face=宋体>忽略</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">DirBrackets=1</span><font style=font-family:宋体 face=宋体>文件夹名显示在方括号中</font> (1/0，<font style=font-family:宋体 face=宋体>默认</font>=1)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">DirsInFooter=1</span><font style=font-family:宋体 face=宋体>在状态栏显示选中文件总数和文件夹总数</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">DirTabLimit=32</span><font style=font-family:宋体 face=宋体>显示在文件夹标签的最大字符数</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">DirTabOptions=824</span><font style=font-family:宋体 face=宋体>以下标志之和：<br>1：总显示标签<br>
+2：多行标签<br>4：所有标签同样宽度<br>8：限制标签标题的长度（见DirTabLimit）<br>
+16：“关闭所有标签”时确认<br>
+32：双击关闭标签<br>
+64：打开新标签后激活<br>
+128：在当前标签旁打开新标签<br>
+256：用星号 * 标识锁定的标签<br>
+512：单击标签时激活目标窗口<br>
+1024：在标签标题中显示盘符</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">DisconnectOnSuspend=0</span><font style=font-family:宋体 face=宋体>以下标志之和：<br>1: 挂起PC时断开所有FTP连接<br>
+2: 断开所有文件系统插件（具有断开功能的）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">DllLoad=0</span><font style=font-family:宋体 face=宋体>设置插件和资源管理器扩展项DLL的加载方法：<br>-1: 总不从当前文件夹加载（最安全）<br>
+0：仅从关联菜单调用（例如“发送到”调用Outlook2003时）<br>1：还从当前文件夹加载（TC7.55a及之前的版本如此）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">DriveBarHide=</span><font style=font-family:宋体 face=宋体>允许隐藏驱动器栏的某部分：<br>A-Z=驱动器<br>
+0-9=ftp<br>\ =网络邻居<br>. =上级文件夹+根文件夹<br>
+- =卷标和剩余空间/总空间<br>
+与Allowed= 选项不同，仍然可以通过选择列表（Alt+F1/F2）或"cd"命令等访问隐藏的驱动器。
+<br>为了隐藏终端服务器的驱动器，这些驱动器符应放在$后面:
+<br>DriveBarHide=A$CDE 隐藏本地驱动器A和其他主机的CDE</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">DriveisCD=FGH</span><font style=font-family:宋体 face=宋体>指定驱动器F，G和H是</font>CD-ROM<font style=font-family:宋体 face=宋体>驱动器。从这些驱动器复制文件时，</font>Total Commander<font style=font-family:宋体 face=宋体>不会复制只读属性。对于网络映射的</font>CD<font style=font-family:宋体 face=宋体>驱动器有用，它不能自动识别。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">DriveLib=</span><font style=font-family:宋体 face=宋体>从指定</font>DLL<font style=font-family:宋体 face=宋体>文件加载驱动器按钮的图标。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">DrivesExportUpcase=-1</span><font style=font-family:宋体 face=宋体>1：在使用cm_CopyFullNamesToClip等内部命令或运行程序时，使用大写盘符（出现在文件名或当前文件夹名中）
+<br>注意：如果设置了DrivesShowUpcase，未给定DrivesExportUpcase的值，使用前者的数值
+</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">DrivesShowUpcase=-1</span><font style=font-family:宋体 face=宋体>1：在诸如驱动器栏，驱动器下拉框，当前文件夹栏等处显示大写盘符</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">DriveTipDelay=0</span><font style=font-family:宋体 face=宋体>驱动器下拉框等待驱动器的描述完全显示的延时时间，单位毫秒，默</font><font style=font-family:宋体 face=宋体>认</font>0<font style=font-family:宋体 face=宋体>。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">DropExtensions=1</span><font style=font-family:宋体 face=宋体>允许右键拖放外壳扩展组件 </font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Editor=notepad.exe</span>F4<font style=font-family:宋体 face=宋体>调用的默认编辑器</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">EditWaitTime=2</span><font style=font-family:宋体 face=宋体>编辑压缩包内或ftp服务器上的文件的超时时间。如果在给定秒数内编辑器关闭，则假定这是一个多文档编辑器，显示一个对话框，用于编辑完成后用户确认。设为0关闭该功能，设为-1不显示对话框（例如文件是通过DDE传递给关联程序的）。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ESCcheck=1</span><font style=font-family:宋体 face=宋体>开始复制前，检查是否按了ESC键（如果是就放弃复制操作）。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ExplorerForCopy=0</span><font style=font-family:宋体 face=宋体>按F5 和 F6后使用内置复制功能（更灵活）或 资源管理器 (复制+粘贴) 方法</font>(0/1)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">FileTipWindows=0</span><font style=font-family:宋体 face=宋体>详细资料视图下，如果过长的文件名无法完全显示，鼠标移至该文件时，以提示窗显示完整文件名。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">FirstFTPSync=1</span><font style=font-family:宋体 face=宋体>第一次与FTP同步时</font> -&gt; <font style=font-family:宋体 face=宋体>显示警告信息</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">FirstMLSDsync=1</span><font style=font-family:宋体 face=宋体>第一次使用MLSD命令（而不是LIST）与FTP同步时</font> -&gt; <font style=font-family:宋体 face=宋体>显示警告信息</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">FirstTime=1</span>Total 
+ Commander<font style=font-family:宋体 face=宋体>第一次运行</font> -&gt; <font style=font-family:宋体 face=宋体>显示发行说明</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">FirstTimeUnpack=1</span><font style=font-family:宋体 face=宋体>第一次</font> "<font style=font-family:宋体 face=宋体>解压文件</font>" -&gt; <font style=font-family:宋体 face=宋体>提示在文件上按回车</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">FirstTimeZIP=1</span><font style=font-family:宋体 face=宋体>第一次压缩</font>/<font style=font-family:宋体 face=宋体>解压</font> -&gt; <font style=font-family:宋体 face=宋体>压缩程序对话框</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">GetTextMode=0</span><font style=font-family:宋体 face=宋体>为屏幕阅读器设置格式。设置列分隔符：<br>
+0：空格<br>
+1：tab（制表符）<br>
+2=回车<br>
+3=回车换行<br>
+4=与2类似<br>
+5=与3类似<br>
+4和5显示带列表头（tab分隔）的字段，例如：Name:&lt;tab&gt;Filename&lt;回车&gt;Size:&lt;tab&gt;10k</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">HebrewListerFix=0</span><font style=font-family:宋体 face=宋体>如果=1，希伯来版</font>windows<font style=font-family:宋体 face=宋体>下</font>Lister<font style=font-family:宋体 face=宋体>中选择英文文本时使用坐标修正（仅当未使用Uniscribe时）。</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">HideRemovableNoMedia=0</span><font style=font-family:宋体 face=宋体>如果设为非零值，除非插入介质，否则不显示USB读卡器等移动驱动器。注意CD-ROM和软驱总是显示。该功能用于：<br>
+1：驱动器栏<br>
+2：驱动器下拉列表<br>
+4：查找文件－驱动器<br>
+7：全部<br>
+该功能对于某些驱动器可能很慢，如果发现变慢，请禁用。</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">HistoryAppend=1</span>1= 
+ ALT+<font style=font-family:宋体 face=宋体>↓</font><font style=font-family:宋体 face=宋体>调出文件夹访问历史列表后选择的文件夹移至列表尾部</font> 
+ (<font style=font-family:宋体 face=宋体>默认</font>)<br>
+0=<font style=font-family:宋体 face=宋体>选择历史列表的某项后，仅在它前面做√标识，不改变它的位置。</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">IconLib=c:\totalcmd\wcicolib.icl</span><font style=font-family:宋体 face=宋体>从指定</font>DLL<font style=font-family:宋体 face=宋体>加载文件窗口显示的默认图标。见</font><a target=_blank href=http://www.ghisler.com/><b>www.ghisler.com</b></a><font style=font-family:宋体 face=宋体>上的示例</font>ICL<font style=font-family:宋体 face=宋体>。</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">IconsInDriveList=1</span><font style=font-family:宋体 face=宋体>在驱动器下拉框（Alt+F1/F2）和“找不到驱动器”提示框中显示驱动器图标</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">IconsInMenus=0</span><font style=font-family:宋体 face=宋体>允许在主菜单上显示wcmicons.dll或wciconex.dll中的图标。<br>以下标志之和：<br>1：允许在菜单中显示图标<br>
+2：图标周围加边框<br>4：显示24x24图标，而不是16x16<br>8：显示32x32图标<br>
+包含4+8：显示48x48图标（用于极高分辨率的屏幕）</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">IconsInThread=1</span><font style=font-family:宋体 face=宋体>在单独线程中加载</font>EXE <font style=font-family:宋体 face=宋体>和</font> LNK<font style=font-family:宋体 face=宋体>文件的图标</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">IconsOnNet=1</span><font style=font-family:宋体 face=宋体>加载网络驱动器上的</font>EXE <font style=font-family:宋体 face=宋体>和</font> LNK<font style=font-family:宋体 face=宋体>文件的图标</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">IconOverlays=0</span><font style=font-family:宋体 face=宋体>启用</font>/<font style=font-family:宋体 face=宋体>禁用附加图标（如快捷方式图标上的小箭头）</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">IconsSpecialFolders=3</span><font style=font-family:宋体 face=宋体>启用/禁用显示特殊文件夹图标（0=无，1=本地文件系统，2=虚拟文件夹和网络，3=全部）</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">IgnoreListFile=</span><font style=font-family:宋体 face=宋体>指向一个纯文本文件（路径+名字），它包含将被Total Commander忽略（不显示，复制，删除等）的名字列表。支持通配符，文件名可以包含或不包含路径（驱动器）。每行可以是以下形式之一：</font></p>
+<p style=margin-top:0;margin-bottom:0><span style="margin-left=-170.25pt;text-indent=0pt;width:170pt"> </span><span style="margin-left=-170.25pt;text-indent=170pt;width:300pt">filename.ext</span><font style=font-family:宋体 face=宋体>隐藏所有子文件夹中的filename.ext</font></p>
+<p style=margin-top:0;margin-bottom:0><span style="margin-left=-170.25pt;text-indent=0pt;width:170pt"> </span><span style="margin-left=-170.25pt;text-indent=170pt;width:300pt">c:\test\filename.ext</span><font style=font-family:宋体 face=宋体>仅隐藏c:\test中的filename.ext</font></p>
+<p style=margin-top:0;margin-bottom:0><span style="margin-left=-170.25pt;text-indent=0pt;width:170pt"> </span><span style="margin-left=-170.25pt;text-indent=170pt;width:300pt">\System volume information</span><font style=font-family:宋体 face=宋体>隐藏所有驱动器上的这个文件夹</font></p>
+<p style=margin-top:0;margin-bottom:0><span style="margin-left=-170.25pt;text-indent=0pt;width:170pt"> </span><span style="margin-left=-170.25pt;text-indent=170pt;width:300pt">*.bak *.~*</span><font style=font-family:宋体 face=宋体>隐藏所有文件夹中的此类文件</font></p>
+<p style=margin-top:0;margin-bottom:0><span style="margin-left=-170.25pt;text-indent=0pt;width:170pt"> </span><span style="margin-left=-170.25pt;text-indent=170pt;width:300pt">c:\test\*.bak *.~*</span><font style=font-family:宋体 face=宋体>仅隐藏c:\test中的此类文件</font></p>
+<p style=margin-top:0;margin-bottom:0><span style="margin-left=-170.25pt;text-indent=0pt;width:170pt"> </span><span style="margin-left=-170.25pt;text-indent=170pt;width:300pt">\test\*.bak *.~*</span><font style=font-family:宋体 face=宋体>隐藏所有驱动器上子文件夹test中的此类文件</font></p>
+<p style=margin-top:0;margin-bottom:0><span style="margin-left=-170.25pt;text-indent=0pt;width:170pt"> </span><span style="margin-left=-170.25pt;text-indent=170pt;width:300pt">c:\test\"abc def.*" *.~*</span><font style=font-family:宋体 face=宋体>名字包含空格和通配符（* 或?）时必须有双引号</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">IgnoreListFileEnabled=1</span><font style=font-family:宋体 face=宋体>决定是否启用IgnoreListFile= 指向的文件。可以暂时禁用忽略功能，无需修改IgnoreListFile。内部命令 cm_SwitchIgnoreList打开/关闭本选项。</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">IgnoreWheel=0</span><font style=font-family:宋体 face=宋体>忽略</font><font style=font-family:宋体 face=宋体>智能鼠标的滚轮。</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">InactiveFocus=0</span><font style=font-family:宋体 face=宋体>如果设置为1或RGB值（见BackColor的说明），则在目标窗口也显示光标。接受形式为$BBGGRR的十六进制数值。<br>
+可在颜色值基础上加：$1000000 = 虚线边框，$2000000=点划线边框，$3000000=实线边框</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">InplaceOkButton=1</span><font style=font-family:宋体 face=宋体>显示确认就地重命名的按钮：<br>1：在右侧<br>2：在左侧<br>0：不显示</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">InplaceRename=1</span><font style=font-family:宋体 face=宋体>允许</font>/<font style=font-family:宋体 face=宋体>禁止点击文件名两次后就地重命名</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">InplaceRenamePath=1</span><font style=font-family:宋体 face=宋体>允许</font>(1) / <font style=font-family:宋体 face=宋体>禁止</font>(0) <font style=font-family:宋体 face=宋体>就地编辑当前路径。默认值等于</font>InplaceRename<font style=font-family:宋体 face=宋体>（如果指定），否则</font>1<font style=font-family:宋体 face=宋体>。<br>2：禁止就地编辑当前路径，但允许单击路径后快速切换文件夹（不必按住Shift）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">InplaceRenameSync=1</span><font style=font-family:宋体 face=宋体>同步文件夹窗口中，点击文件名两次可就地重命名文件</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">InstallDir=</span><font style=font-family:宋体 face=宋体>Total Commander的上次安装文件夹（与注册表相同）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">KeyboardID=0</span><font style=font-family:宋体 face=宋体>TC激活或就地重命名结束后，将键盘布局改为指定数字。
+<br>0：禁用，不改变键盘布局
+<br>1：设置为默认区域代码，例如，德国地区就设置为德国键盘
+<br>其他数值（例子）：
+<br>$0409：英国键盘（QWERTY）
+<br>$0407：德国键盘（QWERTY）
+<br>$0807：瑞士德语键盘
+<br>$040C：法国键盘（AZERTY）
+<br>$0408：希腊键盘
+<br>$0419：俄国键盘
+<br>$e00e0804：中文（带微软拼音输入法）
+<br>$e0010411：日文（带默认输入法）
+<br>$代表16进制数字。语言代码可在这里找到（第一列）：
+<br>http://msdn.microsoft.com/en-us/library/dd318693(VS.85).aspx</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">KeyPath=</span><font style=font-family:宋体 face=宋体>注册文件所在文件夹</font> (<font style=font-family:宋体 face=宋体>不写文件名！</font>)<font style=font-family:宋体 face=宋体>。</font>Total Commander<font style=font-family:宋体 face=宋体>默认在自己的文件夹中查找注册文件。如果通过局域网无法读注册文件，这项设置有用。如果KeyPath=$，TC在注册表中查找注册信息（“Software/Ghisler/Total Commander”下的二进制数据键值“key”）。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">LanguageINI=</span><font style=font-family:宋体 face=宋体>使用的语言文件</font> (WCMD_DEU.LNG <font style=font-family:宋体 face=宋体>等</font>)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Lastmd5=0</span><font style=font-family:宋体 face=宋体>1: 文件 - 创建 CRC 校验文件 的上次选项是MD5</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Lastrunas=</span><font style=font-family:宋体 face=宋体>cm_OpenAsUser上次使用的用户名</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ListName=</span><font style=font-family:宋体 face=宋体>“以后下载” 和 “ftp按列表下载”上次使用的下载列表文件</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">LockedGoToDriveRoot=0</span><font style=font-family:宋体 face=宋体>0：点击</font> [ \ ] <font style=font-family:宋体 face=宋体>按钮后切换到锁定标签的基础目录<br>1：点击</font> [ \ ] <font style=font-family:宋体 face=宋体>按钮后切换到驱动器根目录</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">LockedTabChange=1</span><font style=font-family:宋体 face=宋体>改变锁定标签的文件夹时：<br>0：总打开新标签<br>1：重用含有相同文件夹的标签<br>2：重用第一个非锁定标签
+<br>3：重用最后一个非锁定标签</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">LogFile=</span><font style=font-family:宋体 face=宋体>记录文件操作（非ftp）的日志文件名</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">LogKeepCount=30</span><font style=font-family:宋体 face=宋体>使用日志文件轮换功能时，最多保存的日志文件个数</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">LogOptions=7198</span><font style=font-family:宋体 face=宋体>决定记录哪些操作，以下标志之和：<br>
+1 启用日志功能<br>
+2 复制，移动，创建快捷方式<br>
+4 删除文件<br>
+8 创建/删除文件夹<br>
+16 压缩相关功能<br>
+32 当前未用<br>
+64 文件系统插件操作<br>
+1024 操作成功<br>
+2048 操作失败<br>
+4096 操作启动了，但文件被跳过
+</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">LogRotateLimit=0</span><font style=font-family:宋体 face=宋体>如果设置为-1，每天0点以后启用新日志文件<br>如果设置为v&gt;0，日志文件大于v kB后启用新日志</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">LongInStatus=0</span><font style=font-family:宋体 face=宋体>详细资料显示方式下，在状态栏显示长文件名。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">LongNameCopy=0</span><font style=font-family:宋体 face=宋体>文件操作中，如果目标名称超过259个字符，是否警告：
+<br>0=总是
+<br>1=从不
+<br>2=仅当源文件名称未超过259个字符时
+<br>3=不允许长文件名</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">LongNamesToDos=0</span><font style=font-family:宋体 face=宋体>在win9X中按Shift+Enter启动程序时传递短/长文件名到DOS窗口(0/1)。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Mainmenu=</span><font style=font-family:宋体 face=宋体>自定义的主菜单文件路径和名字</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">MarkDirectories=1</span><font style=font-family:宋体 face=宋体>用小键盘的＋选择文件时同时选中文件夹</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">MediaRemote=0</span><font style=font-family:宋体 face=宋体>1：使用windows媒体中心遥控器控制TC：<br>
+&lt;- Backspace，i 常用文件夹列表，&gt;| Tab，|&lt; Ctrl+Tab，Play/Pause 命令菜单，<br>
+Stop：对话框中等同于ESC，文件列表中作用是选择文件</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">MinimizeOnClose=0</span><font style=font-family:宋体 face=宋体>何时最小化主窗口，而不是关闭程序。以下数值之和：<br>
+1：点击[X]按钮时<br>
+2：按Alt+F4时<br>
+4：点击“Alt+F4 退出”按钮时<br>
+注意：附加Shift键可强制退出。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">MinLineHeight=0</span><font style=font-family:宋体 face=宋体>如果给定数值大于0，设置文件列表的最小行高（像素）。如果给定负数，它的绝对值加到正常行高上，例如，MinLineHeight=-2，行高=16 -&gt; 18</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">MoveToDirWarn=1</span><font style=font-family:宋体 face=宋体>1: F6 移动，Shift+F6 就地重命名：如果用户输入一个已存在文件夹的名字作为目标文件名时，警告用户</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">MrtReplacePluginChars=1</span><font style=font-family:宋体 face=宋体>0: 使用批量重命名工具时，不自动替换从插件得到的无效字符（例如，':' -&gt; '.'）-&gt; 用户必须自己处理</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">MultiRenameEdit=</span><font style=font-family:宋体 face=宋体>批量重命名工具中手工编辑文件名时使用的编辑器</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">MultiRenameLoadSettings= </span><font style=font-family:宋体 face=宋体>定义批量重命名工具启动后加载哪个设置：
+<br>(空)：启用前次使用的设置（关闭后不记录到ini）
+<br>设置名字：加载指定名字的设置
+<br>未知名字：加载默认设置</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">NetHoodInThread=1</span><font style=font-family:宋体 face=宋体>在后台线程读取网络邻居</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">NetHoodReadInfo=</span><font style=font-family:宋体 face=宋体>决定调用哪个网络函数<br>1:GetAttributesOf，2:SHGetDataFromIDList或3（两个都用）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">NetHoodStyle=1</span><font style=font-family:宋体 face=宋体>网络邻居的样式：<br>
+0：与windows提供的一致<br>
+1：还显示XP样式的“工作组”子文件夹<br>
+2：仅XP样式</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Netwarebugfix=0</span><font style=font-family:宋体 face=宋体>1：远程驱动器上的文件不重命名</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">NewStyleProgress=</span><font style=font-family:宋体 face=宋体>1: 使用操作系统的进度条（XP以后的Windows中的默认值）<br>
+0: 使用TC自己的进度条（其他低版本Windows的默认值）<br>
+2: 与1类似，但进度条不是小段分割的（仅用于经典主题）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">NewTimeZoneMethod=</span><font style=font-family:宋体 face=宋体>1: Windows 7的时区方法（windows 7下的默认值）<br>
+0: 旧方法（其他低版本Windows的默认值）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Noreread=AB\</span><font style=font-family:宋体 face=宋体>不自动重读这些驱动器；\ 代表网络邻居，/ 代表文件系统插件，冒号：代表虚拟文件夹（如桌面）。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Noreread2=AB\</span><font style=font-family:宋体 face=宋体>关闭、重启</font>Total Commander<font style=font-family:宋体 face=宋体>后不自动重读这些驱动器。如果没有</font>noreread2<font style=font-family:宋体 face=宋体>，使用</font>noreread= 
+ <font style=font-family:宋体 face=宋体>的设置，其动作与</font>6.52<font style=font-family:宋体 face=宋体>版之前的</font>TC<font style=font-family:宋体 face=宋体>相同。例如：</font><br>Noreread=ABC\ <font style=font-family:宋体 face=宋体>且</font> Noreread2=AB\ 
+ <font style=font-family:宋体 face=宋体>：不自动重读软驱，</font>C<font style=font-family:宋体 face=宋体>盘和网络，但关闭重启</font>Total 
+ Commander<font style=font-family:宋体 face=宋体>时记住</font>C<font style=font-family:宋体 face=宋体>盘的文件夹。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">OldDriveIcons=0</span><font style=font-family:宋体 face=宋体>1: 为驱动器工具栏使用TC 6.5x中的旧图标<br>
+0: 使用新的驱动器图标</font></p><font style=font-family:宋体 face=宋体>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">OldStyleDir=0</span><font style=font-family:宋体 face=宋体>用</font>SetCurDir<font style=font-family:宋体 face=宋体>函数检验文件夹是否存在</font> / <font style=font-family:宋体 face=宋体>直接用</font>FindFirstFile<font style=font-family:宋体 face=宋体>函数</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">OldStyleTree=0</span><font style=font-family:宋体 face=宋体>本选项仅用于文件窗口中的文件夹树:<br>
+0: 显示资源管理器风格的文件夹树，包含所有驱动器<br>
+1: 总加载一个驱动器的完整文件夹树<br>
+2: 仅显示当前驱动器的未展开的文件夹树</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">OleComments=1</span><font style=font-family:宋体 face=宋体>加载备注：<br>
+0: 仅descript.ion 和 files.bbs备注文件<br>
+1: 从资源管理器（NTFS数据流和Word文档）和备注文件<br>
+2: 仅从资源管理器<br>
+3: 以上皆非（如果定义了，只从插件读取）</font></p><font style=font-family:宋体 face=宋体>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Onlyonce=0</span><font style=font-family:宋体 face=宋体>1：每个用户仅允许运行一个Total Commander实例（比如通过RunAs启动）
+<br>-1：这台机器上仅允许运行一个Total Commander实例（对所有用户）
+<br>x&gt;0：与1相同，但每个用户允许x个实例
+<br>x&lt;0：与-1相同，但全机器允许x个实例（所有用户加起来）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">PanelsVertical=0</span><font style=font-family:宋体 face=宋体>左右</font><font style=font-family:宋体 face=宋体>摆放两个文件列表窗</font> (0) <font style=font-family:宋体 face=宋体>或</font><font style=font-family:宋体 face=宋体>上下摆放</font> (1)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">PluginBaseDir=</span><font style=font-family:宋体 face=宋体>插件自动安装的标准路径。</font>TC<font style=font-family:宋体 face=宋体>安装新插件时在此路径后添加插件类型和默认插件文件夹。</font><br><font style=font-family:宋体 face=宋体>例如：</font>pluginbasedir=%COMMANDER_PATH%\plugins<font style=font-family:宋体 face=宋体><br>
+名为</font>sample_packer<font style=font-family:宋体 face=宋体>的压缩程序插件的路径将是：</font><br>%COMMANDER_PATH%\plugins\wcx\sample_packer\</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">PortInDriver=1</span><font style=font-family:宋体 face=宋体>1：所有传输在驱动程序内部进行</font>(<font style=font-family:宋体 face=宋体>默认</font>) -&gt; <font style=font-family:宋体 face=宋体>更快</font>, <font style=font-family:宋体 face=宋体>但传输中</font>PC<font style=font-family:宋体 face=宋体>不可用
+<br>0：传输在用户态进行</font>-&gt; <font style=font-family:宋体 face=宋体>较慢，但多线程响应好
+<br>仅影响</font>Win95/98/ME<font style=font-family:宋体 face=宋体>，</font>WinNT/2000<font style=font-family:宋体 face=宋体>中所有传输必须在驱动内完成。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">PreloadThumbnails=0</span><font style=font-family:宋体 face=宋体>1：进入文件夹后预先加载缩略图，而不仅在滚动到那一行时。<br>2：与1相同，但在“展开所有文件夹”显示方式下也生效<br>3：仅预先加载当前可见缩略图下方两行的缩略图。<br>
+0: 不预先加载，仅当进入可视范围才加载缩略图</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">PromptForUser=0</span><font style=font-family:宋体 face=宋体>0：连接网络驱动器时，仅设置参数CONNECT_INTERACTIVE。<br>1：还设置参数CONNECT_PROMPT，因此总询问用户名。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">QuickSearchAutoFilter=0</span><font style=font-family:宋体 face=宋体>0：禁止快速搜索时自动过滤（Ctrl+S）<br>1：允许快速搜索时自动过滤（Ctrl+S）<br>-1：与0类似，但关闭TC时不保存过滤状态（启动TC时总禁止过滤）<br>
+2：与1类似，但也不保存过滤状态（启动TC时总打开过滤）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">QuickSearchExactMatch=0</span><font style=font-family:宋体 face=宋体>0：句号相当于*. ，win.i 也匹配wincmd.ini<br>
+1：精确匹配：输入 win.i 仅匹配 win.ini，但不匹配 wincmd.ini</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">QuickSearchMatchBeginning=1</span><font style=font-family:宋体 face=宋体>0: 搜索win等同于*win<br>
+1: 精确匹配：win只匹配win.ini，不会匹配otherwin.ini</font></p><font style=font-family:宋体 face=宋体>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">RedirectSection=</span><font style=font-family:宋体 face=宋体>见AlternateUserIni的说明。注意：当本选项写在[Configuration]节，该节的所有设置都被转存，但AlternateUserIni和UseIniInProgramDir总是从主INI文件读取。</font></p><font style=font-family:宋体 face=宋体>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">RenameEditUnicode=0</span><font style=font-family:宋体 face=宋体>批量重命名工具:编辑文件名 的设置：<br>0：将文本文件存为ANSI（纯文本），但选定文件名中包含来自其它代码页的Unicode字符时例外（例如默认英文代码页时出现西里尔字母）<br>
+1：总是将文本文件存为Unicode，例如将英文文件名改为俄文时有用</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">RenameSelOnlyName=0</span><font style=font-family:宋体 face=宋体>就地重命名时，仅选择文件名，不包含扩展名</font>(1)<font style=font-family:宋体 face=宋体>，或</font> <font style=font-family:宋体 face=宋体>名字</font>+<font style=font-family:宋体 face=宋体>扩展名</font> (0)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ResolutionSpecific=1</span><font style=font-family:宋体 face=宋体>0：与屏幕分辨率相关的数据，如字体的字形+大小，保存在单独的[AllResolutions]节内<br>
+1：与屏幕分辨率相关的数据保存在诸如[1024x768 (10x20)]这样的节内</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">RestrictInterface=</span><font style=font-family:宋体 face=宋体>禁用部分用户界面。以下选项数值相加：</font><br>1=<font style=font-family:宋体 face=宋体>开始菜单</font> <br>
+2=<font style=font-family:宋体 face=宋体>命令行</font><br>4=<font style=font-family:宋体 face=宋体>工具栏和工具按钮的右键菜单</font><br>8=<font style=font-family:宋体 face=宋体>驱动器按钮的右键菜单</font><br>16=<font style=font-family:宋体 face=宋体>文件的右键菜单</font><br>32=<font style=font-family:宋体 face=宋体>常用目录列表的设置</font><br>64=FTP (CTRL+N, CTRL+F)<br>
+128=<font style=font-family:宋体 face=宋体>回车键（运行程序，打开文件）</font><br>
+256=<font style=font-family:宋体 face=宋体>文件系统插件</font><br>
+512=<font style=font-family:宋体 face=宋体>端口连接（USB或并口）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ReverseHistory=0</span><font style=font-family:宋体 face=宋体>1：最近访问文件夹的历史列表倒序排列（最新的在列表上方）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SameScreenAsTC=1</span><font style=font-family:宋体 face=宋体>多显示器上何处显示对话框，以下标志之和：<br>1：模态对话框总是与主窗口在同一屏幕上<br>2：查看器窗口也与主窗口在同一屏幕<br>4：文件比较窗口也与主窗口在同一屏幕</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SaveCommands=1</span><font style=font-family:宋体 face=宋体>退出</font>TC<font style=font-family:宋体 face=宋体>时保存命令历史</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SaveHistory=1</span><font style=font-family:宋体 face=宋体>将曾访问过的文件夹（Alt+下方向键调用）保存在[LeftHistory] 和 [RightHistory]</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Savepath=1</span><font style=font-family:宋体 face=宋体>退出</font>TC<font style=font-family:宋体 face=宋体>时保存当前</font><font style=font-family:宋体 face=宋体>路径</font></p>
+<p class=Standard--- style=margin-left:170.10pt;text-indent:-170.10pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Savepanels=1</span><font style=font-family:宋体 face=宋体>退出</font>TC<font style=font-family:宋体 face=宋体>时保存左右面板的视图设置</font></p>
+<p class=Normal-1 style=margin-left:170.10pt;text-indent:-170.10pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SearchInFiles=</span><font style=font-family:宋体 face=宋体>通过</font> <a href=https://xbeta.info/tc-help/totalcmd/dlg_search.htm><font style=font-family:宋体 face=宋体>查找功能</font></a> 
+ <font style=font-family:宋体 face=宋体>可搜索压缩包，此处可添加更多压缩包类型，例如：</font>SearchInFiles=*.EXE *.JAR</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SearchKeepLast=1</span><font style=font-family:宋体 face=宋体>关闭“搜索文件”对话框后记住前次搜索结果（但“输出到列表”后不再保留）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SelectionFocus=0</span><font style=font-family:宋体 face=宋体>如果有文件被选中，在当前文件周围显示指定颜色边框。可接受数值见 InactiveFocus 的说明。<br>
+如果加$4000000，表示仅当前文件未被选中时才显示边框。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SelectionMarker=</span><font style=font-family:宋体 face=宋体>对于选中文件，响应WM_GETTEXT消息时返回这些字符（用于屏幕阅读器）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SeparateTree=0</span><font style=font-family:宋体 face=宋体>不显示（0）单独文件夹树，一个（1）或两个（2）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SeparateTreeWidth=160</span><font style=font-family:宋体 face=宋体>单独文件夹树窗口的宽度</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SetArchiveBitOnRename=1</span><font style=font-family:宋体 face=宋体>重命名文件时，默认设置存档属性。改为</font>0<font style=font-family:宋体 face=宋体>不设置。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ShellExtIcons=1</span>1=<font style=font-family:宋体 face=宋体>显示</font>shell<font style=font-family:宋体 face=宋体>扩展图标</font> (<font style=font-family:宋体 face=宋体>每个文件图标不同</font>), 
+ 0=<font style=font-family:宋体 face=宋体>不显示</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ShowAMPM=0</span><font style=font-family:宋体 face=宋体>显示</font>12<font style=font-family:宋体 face=宋体>小时</font>AM/PM <font style=font-family:宋体 face=宋体>格式的时间</font> 
+ (<font style=font-family:宋体 face=宋体>美国风格</font>)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ShowCentury=1</span><font style=font-family:宋体 face=宋体>文件列表中，日期显示世纪</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ShowCopyOptions=0</span><font style=font-family:宋体 face=宋体>1=F5复制文件对话框的额外选项始终显示</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ShowHiddenSystem=0</span>1=<font style=font-family:宋体 face=宋体>显示隐藏</font>/<font style=font-family:宋体 face=宋体>系统文件</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Showicons=2</span><font style=font-family:宋体 face=宋体>显示图标：0=不显示任何图标，1=默认，2=所有类型</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ShowEXEandLNKicons=1</span><font style=font-family:宋体 face=宋体>显示</font>EXE <font style=font-family:宋体 face=宋体>和</font> LNK <font style=font-family:宋体 face=宋体>文件的图标<br>0：仅标准图标<br>
+1：显示EXE/LNK的图标<br>2：与1相同，但不显示软盘上的图标</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ShowInstanceNr=1</span><font style=font-family:宋体 face=宋体>多个</font>TC<font style=font-family:宋体 face=宋体>实例运行时，在标题栏显示编号</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ShowParentDirInRoot=0</span><font style=font-family:宋体 face=宋体>在根文件夹（c:\ 等）也显示上层文件夹 [..]</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SingleClickStart=0</span><font style=font-family:宋体 face=宋体>0：双击启动程序（默认）<br>1：鼠标单击启动程序和打开文件</font> (Win98 WEB <font style=font-family:宋体 face=宋体>风格</font>)<br><font style=font-family:宋体 face=宋体>2：鼠标单击仅打开文件夹，双击鼠标才能打开文件<br>4：文本光标不跟随鼠标</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SizeCheck=1</span><font style=font-family:宋体 face=宋体>复制</font><font style=font-family:宋体 face=宋体>前检查目标驱动器是否有足够空间</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SizeFooter=1</span><font style=font-family:宋体 face=宋体>文件列表窗口的标题栏和状态栏如何显示文件字节数：<br>0=字节，1=KB，2=动态，3=动态，带小数，4/5=与2/3类似，但不显示GB（大于1GB的文件按MB显示）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SizeStyle=0</span><font style=font-family:宋体 face=宋体>文件列表中如何显示字节数：<br>
+0=字节，1=KB，2=动态，3=动态，带小数，4/5=与2/3类似，但不显示GB（大于1GB的文件按MB显示）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SkipCharOnCursor=1</span><font style=font-family:宋体 face=宋体>编辑框中的文本被选中一部分时，左右方向键将如何移动光标：<br>
+0：直接将光标置于选中文本的前面/后面<br>
+3：如同没有选中文本一样移动光标（Windows标准）<br>
+1/2：与3类似，但仅适用于左方向键或右方向键</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Small83names=0</span>8.3<font style=font-family:宋体 face=宋体>文件名显示为小写字母（如同Win9x的</font>Explorer<font style=font-family:宋体 face=宋体>）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SortDirExt=0</span><font style=font-family:宋体 face=宋体>允许文件夹按扩展名排序(仅当SortDirsByName=0)</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SortDirsByName=1</span><font style=font-family:宋体 face=宋体>文件夹</font><font style=font-family:宋体 face=宋体>始终按名字排序</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SortUpper=0</span><font style=font-family:宋体 face=宋体>0：默认排序方法<br>1：文件排序时，以下划线开头的文件排后面<br>
+2：文字、数字混合排序，例如，</font>file10.txt<font style=font-family:宋体 face=宋体>排在</font>file1.txt<font style=font-family:宋体 face=宋体>后<br>3：类似于</font>2<font style=font-family:宋体 face=宋体>，比较时使用</font>StrCmpLogicalW<font style=font-family:宋体 face=宋体>函数（需要</font>IE6<font style=font-family:宋体 face=宋体>！）</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SoundDelay=10</span><font style=font-family:宋体 face=宋体>文件操作耗</font><font style=font-family:宋体 face=宋体>时超过此值后播放“操作完成”的声音文件。单位：秒。</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SpaceMovesDown=0</span>1=<font style=font-family:宋体 face=宋体>空格键选择文件时，光标自动下移（类似于</font>insert<font style=font-family:宋体 face=宋体>键）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SpecialCursorMovement=0</span><font style=font-family:宋体 face=宋体>新的光标移动模式。以下标志之和：<br>
+1：左键跳至第1个文件，右键到最后一个<br>2：左键退至上级文件夹，右键打开光标处文件夹/压缩包。<br>
+4：自定义列模式下优先于水平滚动条。如果不设置本选项，仅在水平滚动条已处于最左侧时按左键才能跳至第1个文件。<br>
+8：上/下翻页，而不是跳到第一个/最后一个文件</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SpeedLimit=5.0</span><font style=font-family:宋体 face=宋体>后台传输管理器上次使用的速度限值（</font>kBytes/s<font style=font-family:宋体 face=宋体>）</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SpeedLimitEnabled=0</span><font style=font-family:宋体 face=宋体>1: 允许打开后台传输管理器后立即限速</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">StartupScreen=1</span><font style=font-family:宋体 face=宋体>启动</font>TC<font style=font-family:宋体 face=宋体>时显示</font>/<font style=font-family:宋体 face=宋体>不显示</font><font style=font-family:宋体 face=宋体>标志画面</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SubdirCopyOrder=4</span><font style=font-family:宋体 face=宋体>子文件夹中的文件被复制的顺序：<br>
+4：不排序<br>0...3：分别按文件名，扩展名，大小，日期/时间升序排列<br>
+-1...-4：分别按文件名，扩展名，大小，日期/时间降序排列<br>
+5：与活动窗口的排序方式相同（不能按自定义列排序，也不能使用多种排序条件）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SyncButtons=63</span><font style=font-family:宋体 face=宋体>同步文件夹</font><font style=font-family:宋体 face=宋体>窗口中各按钮的状态，是以下标志的和：<br>
+1：从左至右<br>2：相同文件<br>4：不同文件<br>8：从右至左<br>16：重复文件</font> (<font style=font-family:宋体 face=宋体>两侧都存在的文件</font>)<br>
+<font style=font-family:宋体 face=宋体>32：独有文件</font> (<font style=font-family:宋体 face=宋体>仅一侧有的文件</font>)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SyncFlags=1</span><font style=font-family:宋体 face=宋体>同步文件夹窗口上次的选项，是以下常数的和：<br>1：包含子文件夹<br>
+2：按文件内容比较<br>4：忽略文件日期<br>8：备份左边文件</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SyncHideHiddenSystem=0</span><font style=font-family:宋体 face=宋体>允许同步时排除隐藏/系统文件：<br>0：不隐藏带隐藏/系统属性的文件<br>
+1：两侧文件都具备隐藏/系统属性时隐藏<br>2：任意一侧文件具备隐藏/系统属性时隐藏<br>
+加4：还考虑主程序的显示 隐藏/系统文件的选项</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SyncIgnoreJunctions=0</span><font style=font-family:宋体 face=宋体>0：同步时处理挂接的文件夹<br>
+1：同步时排除挂接的文件夹<br><strong>警告：</strong>如果另一侧有同名文件夹存在，其中的文件看起来仅存在于另一侧文件夹，因为这一侧的挂接点被排除了！</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SyncWarnErrors=1</span><font style=font-family:宋体 face=宋体>同步文件夹：控制在读取文件夹出错时何时警告用户：<br>0：从不<br>
+1：无法读取时（例如网络连接丢失）<br>2：访问被拒绝时（出错代码5，用户无权限）<br>
+3：两种情况都警告</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">TabDir=</span><font style=font-family:宋体 face=宋体>记住上次文件夹标签保存/加载的默认文件夹</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">TabEnterDirChange=1</span><font style=font-family:宋体 face=宋体>锁定标签内在文件夹上回车时如何做</font>?<br>
+<font style=font-family:宋体 face=宋体>0：什么也不做<br>1：在新的标签中打开目录<br>2：询问用户</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">TabSeparator=:</span><font style=font-family:宋体 face=宋体>设置文件夹标签中显示的驱动器符和当前文件夹之间的分隔符。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">TabSwitchMode=0</span><font style=font-family:宋体 face=宋体>0: Ctrl+Tab切换文件夹标签时，释放CTRL键后才真正切换<br>
+1: Ctrl+Tab切换文件夹标签时，按TAB键立即切换标签。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">tcmatch=</span><font style=font-family:宋体 face=宋体>自行设定tcmatch.dll的位置。必须包含全路径和文件名，支持环境变量。tcmatch.dll用于扩展快速搜索功能，如搜索中文字符。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">tcmatch64=</span><font style=font-family:宋体 face=宋体>同上，用于64位版本。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Test=</span><font style=font-family:宋体 face=宋体>该键值内部用于检测是否</font>ini<font style=font-family:宋体 face=宋体>文件可写。如果不能，显示出错信息。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">TestIfSharedDir=1</span><font style=font-family:宋体 face=宋体>测试文件夹是否共享</font> -&gt; <font style=font-family:宋体 face=宋体>在图标下部显示手形标志</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ThreadFindFirst=1</span><font style=font-family:宋体 face=宋体>如果是1，在单独的线程调用FindFirstFile，这样当网络连接挂起时，用户可以中断网络访问</font></p><font style=font-family:宋体 face=宋体>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ThumbExplTypes=*.* | *.htm *.html</span><font style=font-family:宋体 face=宋体>通过资源管理器方式获取缩略图的文件类型。为安全起见，HTML文件排除在外（它们的缩略图通过Internet Explorer得到）</font></p><font style=font-family:宋体 face=宋体>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ThumbHeightNoCache=</span><font style=font-family:宋体 face=宋体>不使用缩略图缓冲时缩略图的高度</font></p><font style=font-family:宋体 face=宋体>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ThumbIrfXnTypes=*.*</span><font style=font-family:宋体 face=宋体>通过Irfanview或Xnview获取缩略图的文件类型</font></p><font style=font-family:宋体 face=宋体>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ThumbOptions=15</span><font style=font-family:宋体 face=宋体>以下选项之和：<br>
+1: 使用资源管理器方式获取缩略图<br>
+2: 使用查看程序插件获取缩略图<br>
+4: 使用Irfanview或Xnview获取缩略图（程序路径在Lister中配置）<br>
+8: 按纯文本方式获取缩略图</font></p><font style=font-family:宋体 face=宋体>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ThumbPlgTypes=*.*</span><font style=font-family:宋体 face=宋体>通过查看程序插件获取缩略图的文件类型</font></p><font style=font-family:宋体 face=宋体>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ThumbsCopyDel=</span><font style=font-family:宋体 face=宋体>复制/删除文件时同时复制/删除文件的缩略图</font></p><font style=font-family:宋体 face=宋体>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ThumbsCustomField=</span><font style=font-family:宋体 face=宋体>缩略图下方显示的自定义属性</font></p><font style=font-family:宋体 face=宋体>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ThumbsCustomFieldsEnabled=1</span><font style=font-family:宋体 face=宋体>是否在缩略图下方显示自定义属性</font></p><font style=font-family:宋体 face=宋体>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ThumbsInDlg=0</span><font style=font-family:宋体 face=宋体>是否在替换对话框显示缩略图</font></p><font style=font-family:宋体 face=宋体>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ThumbsLocation=</span><font style=font-family:宋体 face=宋体>缩略图缓冲所在文件夹</font></p><font style=font-family:宋体 face=宋体>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ThumbTxtTypes=*.txt *.ini</span><font style=font-family:宋体 face=宋体>按纯文本方式获取缩略图的文件类型</font></p><font style=font-family:宋体 face=宋体>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ThumbnailMemoryLimit=500</span><font style=font-family:宋体 face=宋体>指定每侧文件窗口在内存中缓冲的缩略图个数（默认：</font>Win9x<font style=font-family:宋体 face=宋体>下</font>200<font style=font-family:宋体 face=宋体>，</font>NT/2000/XP<font style=font-family:宋体 face=宋体>下</font>500<font style=font-family:宋体 face=宋体>，最小</font>100<font style=font-family:宋体 face=宋体>）。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ThumbnailPrealloc=100000</span><font style=font-family:宋体 face=宋体>设置创建缩略图数据库时预分配的字节数，以避免文件碎片。缩略图数据库是一个</font>OLE<font style=font-family:宋体 face=宋体>复合文档，类似于</font>Word<font style=font-family:宋体 face=宋体>的</font>.doc<font style=font-family:宋体 face=宋体>文件。如果创建时不预分配内存，这样的文件将变得非常碎，尤其在</font>NTFS<font style=font-family:宋体 face=宋体>分区上。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ThumbWidthNoCache=</span><font style=font-family:宋体 face=宋体>不使用缩略图缓冲时缩略图的宽度</font></p><font style=font-family:宋体 face=宋体>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Tips=3</span><font style=font-family:宋体 face=宋体>提示信息 1=关于按钮的，2=关于驱动器的，3=两者都有</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ToolTipDelay=500</span><font style=font-family:宋体 face=宋体>鼠标放到工具栏按钮上，延时多少毫秒才显示</font><font style=font-family:宋体 face=宋体>提示信息</font><font style=font-family:宋体 face=宋体>，默认</font>500<font style=font-family:宋体 face=宋体>。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">TrayIcon=0</span><font style=font-family:宋体 face=宋体>最小化</font>TC<font style=font-family:宋体 face=宋体>后缩至</font><font style=font-family:宋体 face=宋体>托盘区</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Tree=0</span><font style=font-family:宋体 face=宋体>显示文件夹树 1=不排序的，0=按名字排序的</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">TreeFileLocation=</span><font style=font-family:宋体 face=宋体>定义文件</font>treeinfo.wc<font style=font-family:宋体 face=宋体>的不同位置，例如：</font> treefilelocation=c:\somedir\treeinfo%D%.wc<br>
+%D% <font style=font-family:宋体 face=宋体>代表驱动器符</font> (<font style=font-family:宋体 face=宋体>或共享文件夹的根，</font>\ <font style=font-family:宋体 face=宋体>被</font> _ <font style=font-family:宋体 face=宋体>代替</font>)<br>
+%R% <font style=font-family:宋体 face=宋体>代表根路径</font><br>%L% <font style=font-family:宋体 face=宋体>代表卷标</font><font style=font-family:宋体 face=宋体><br>请注意这些变量必须大写</font>, <font style=font-family:宋体 face=宋体>否则</font>TC<font style=font-family:宋体 face=宋体>会在环境变量中查找这些名字！</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">TreeFileLocationE=</span><font style=font-family:宋体 face=宋体>仅设置</font><font style=font-family:宋体 face=宋体>驱动器</font>E<font style=font-family:宋体 face=宋体>的</font>treeinfo<font style=font-family:宋体 face=宋体>文件位置</font><font style=font-family:宋体 face=宋体>，只有</font>treefilelocation=<font style=font-family:宋体 face=宋体>也定义才有效！</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">TreeFileLocation__server_share=</span><font style=font-family:宋体 face=宋体>共享目录</font>\\server\share<font style=font-family:宋体 face=宋体>的</font>treeinfo<font style=font-family:宋体 face=宋体>文件位置</font> (treefilelocation= <font style=font-family:宋体 face=宋体>也必须定义</font>)<font style=font-family:宋体 face=宋体>。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">TreeUpdateLimit=2048</span><font style=font-family:宋体 face=宋体>文件大小限值(kBytes)，小于该限值的文件夹树文件treeinfo.wc才会在复制，删除等文件操作中自动更新。对于庞大的文件夹树，这次更新可能会花费很长时间。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">tsclient=\\tsclient</span><font style=font-family:宋体 face=宋体>指定远端主机的名称，它的驱动器符将显示在驱动器下拉列表和驱动器栏上。仅显示一个字符。如果禁用，可设置空字符串（tsclient=）。通常仅用于Windows 7的XP模式或终端服务器。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">UnicodeListWarn=</span><font style=font-family:宋体 face=宋体>本选项在TC 7.5及后续版本不再使用</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">UpdateEnv=3</span><font style=font-family:宋体 face=宋体>系统环境变量变化时是否立即在TC中生效。以下数值之和：<br>1：打开/禁用该功能<br>2：响应增加新环境变量 (不仅更新已修改的环境变量)</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">UpdateTreeAtStartup=1</span><font style=font-family:宋体 face=宋体>决定在启动时单独文件夹树展开至当前文件夹(1) 或仅当用户第一次切换文件夹时(0)。</font></p><font style=font-family:宋体 face=宋体>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">UsbBufSize=-1</span><font style=font-family:宋体 face=宋体>使用USB连接时缓冲区的大小（kB）（-1代表可使用的最大字节数，目前是64kB）。</font></p><font style=font-family:宋体 face=宋体>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">UseFastCtrlC=1</span><font style=font-family:宋体 face=宋体>当用户按Ctrl+C或Ctrl+X时，加载右键菜单，执行“复制”或“剪切”功能（并不真正显示右键菜单）。<br>
+1：加载右键菜单，但不加载任何扩展项（很快，但不能使用任何资源管理器的复制扩展项）<br>
+0：加载完整的右键菜单，与点击右键时出现的菜单相同。（稍慢，但可以使用复制扩展项）</font></p><font style=font-family:宋体 face=宋体>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">UseFindForTime=1</span><font style=font-family:宋体 face=宋体>复制文件时，用</font>FindFirstFile<font style=font-family:宋体 face=宋体>获取文件时间，不用</font>GetFileTime</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">UseIniInProgramDir=0</span><font style=font-family:宋体 face=宋体>只有</font>wincmd.ini<font style=font-family:宋体 face=宋体>位于</font>TC<font style=font-family:宋体 face=宋体>安装目录时才读这个变量。它必须直接写在wincmd.ini中，RedirectSection对它没有影响。</font><br><font style=font-family:宋体 face=宋体>它是以下数值之和：<br>1：使用</font>TC<font style=font-family:宋体 face=宋体>安装目录下的</font>wincmd.ini<font style=font-family:宋体 face=宋体>，如果未在注册表或命令行参数指定</font>INI<br><font style=font-family:宋体 face=宋体>2：使用</font>TC<font style=font-family:宋体 face=宋体>安装目录下的</font>wcx_ftp.ini<font style=font-family:宋体 face=宋体>，如果未在注册表或命令行参数指定</font>INI
+<br><font style=font-family:宋体 face=宋体>4：忽略注册表的设置（但命令行参数指定的</font>INI<font style=font-family:宋体 face=宋体>仍然优先）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">UseLongNames=1</span><font style=font-family:宋体 face=宋体>使用长文件名</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">UseRightButton=1</span><font style=font-family:宋体 face=宋体>使用鼠标</font> 1=<font style=font-family:宋体 face=宋体>右键</font>/0=<font style=font-family:宋体 face=宋体>左键</font> 
+ <font style=font-family:宋体 face=宋体>选择文件</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">UseShellConnect=0</span><font style=font-family:宋体 face=宋体>如果 =1，使用旧方法连接网络共享</font> (<font style=font-family:宋体 face=宋体>解决</font>VINES<font style=font-family:宋体 face=宋体>的问题</font>)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">UseTrash=1</span><font style=font-family:宋体 face=宋体>如果回收站可用且启用，删除文件到回收站</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Version=</span>Total 
+ Commander<font style=font-family:宋体 face=宋体>的版本</font>(<font style=font-family:宋体 face=宋体>不经常变</font>)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">VersionInOverwrite=1</span><font style=font-family:宋体 face=宋体>替换对话框中显示文件版本信息。对于慢速网络，设为</font>0<font style=font-family:宋体 face=宋体>。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Viewer=none</span>ALT+F3<font style=font-family:宋体 face=宋体>调用的查看器或</font>none</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">VistaDelete=0</span><font style=font-family:宋体 face=宋体>如果等于1，在Windows Vista（或以后版本）中使用新的删除方法将文件删除到回收站：删除文件夹时移动整个文件夹到回收站，而不是单个处理每个文件。
+警告：这种方法不会在处理只读，隐藏或系统文件，以及非空文件夹时发出警告！如果已在某些驱动器上手工禁用回收站，不要用这种方法！</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Viewertype=1</span>0=<font style=font-family:宋体 face=宋体>内置查看程序</font>/<font style=font-family:宋体 face=宋体>当前文件</font> 1=<font style=font-family:宋体 face=宋体>选定的文件</font> 
+ 2=<font style=font-family:宋体 face=宋体>外部查看程序</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">WantXPLook=1</span><font style=font-family:宋体 face=宋体>仅用于</font>XP<font style=font-family:宋体 face=宋体>以后版本的</font>Windows<font style=font-family:宋体 face=宋体>：显示主窗口的按钮（除工具栏以外）：</font><br>0 = <font style=font-family:宋体 face=宋体>经典风格；</font><br>1 = 
+ XP<font style=font-family:宋体 face=宋体>风格。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">WatchDirs=0</span><font style=font-family:宋体 face=宋体>控制文件夹列表自动更新的功能。它侦测</font>Total Commander<font style=font-family:宋体 face=宋体>之外的程序新建，修改，或删除显示在活动窗口中的文件。</font><br><font style=font-family:宋体 face=宋体>以下标志求和：<br>1：启用（默认：关闭）<br>
+2：还侦测文件大小，日期和属性的变化<br>4：将新增文件添加到列表末尾（默认：排序）<br>
+8：当</font>TC<font style=font-family:宋体 face=宋体>未运行在前台时不响应文件夹变化<br>16：更新状态栏</font> (<font style=font-family:宋体 face=宋体>文件总数</font>)<font style=font-family:宋体 face=宋体>。警告：大文件夹中可能速度慢！
+<br>32：更新标题栏</font> (<font style=font-family:宋体 face=宋体>剩余磁盘空间</font>)<font style=font-family:宋体 face=宋体>。警告：大硬盘上可能速度慢！<br>256：每次自动更新时鸣叫</font> (<font style=font-family:宋体 face=宋体>调试时有用</font>)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">WatchDirsExclude=AB\</span><font style=font-family:宋体 face=宋体>选项</font>WatchDirs=<font style=font-family:宋体 face=宋体>打开的情况下不监视这些驱动器的文件夹变化。对于速度慢的驱动器有用，可关闭自动刷新。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Win32TipWindows=0</span><font style=font-family:宋体 face=宋体>显示</font>Win32<font style=font-family:宋体 face=宋体>风格的文件备注</font>(<font style=font-family:宋体 face=宋体>位于鼠标右下方</font>)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Win95Delete=</span><font style=font-family:宋体 face=宋体>指定</font>Total Commander<font style=font-family:宋体 face=宋体>删除文件的方法：<br>0：用</font>Total Commander<font style=font-family:宋体 face=宋体>自己的删除文件方法</font>(<font style=font-family:宋体 face=宋体>多数设置选项</font>)<br>
+<font style=font-family:宋体 face=宋体>1：用资源管理器的方法<br>-1（默认）：如果</font>Cleansweep<font style=font-family:宋体 face=宋体>在运行，用资源管理器的方法以避免崩溃</font>(<font style=font-family:宋体 face=宋体>因</font>Cleansweep<font style=font-family:宋体 face=宋体>和</font>Total Commander<font style=font-family:宋体 face=宋体>的删除方法不兼容造成的</font>)<font style=font-family:宋体 face=宋体>。如果</font>Cleansweep<font style=font-family:宋体 face=宋体>未运行，</font>Total Commander<font style=font-family:宋体 face=宋体>用自己的方法。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Winsock=c:\windows\winsock.dll</span><font style=font-family:宋体 face=宋体>定义</font>ftp<font style=font-family:宋体 face=宋体>需要的</font>Socket<font style=font-family:宋体 face=宋体>库的位置</font>(16<font style=font-family:宋体 face=宋体>位版本</font>)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Wsock32=c:\windows\wsock32.dll</span><font style=font-family:宋体 face=宋体>定义</font>ftp<font style=font-family:宋体 face=宋体>需要的</font>Socket<font style=font-family:宋体 face=宋体>库的位置</font>(32<font style=font-family:宋体 face=宋体>位版本</font>)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">WipeDir=</span><font style=font-family:宋体 face=宋体>TC使用的临时文件夹（重新运行TC时会清空），如果不包含$wc或（TC7中）\_tc，忽略。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">WmfAllowed=-1</span><font style=font-family:宋体 face=宋体>0：禁止显示</font>WMF<font style=font-family:宋体 face=宋体>文件。同时禁止显示所有文件夹缩略图。
+<br>1：Lister<font style=font-family:宋体 face=宋体>和缩略图允许显示</font>WMF (Windows Metafile) <font style=font-family:宋体 face=宋体>图片。<br>2：允许显示文件夹缩略图（其中可能包含</font>wmf<font style=font-family:宋体 face=宋体>文件）<br>3：显示</font>WMF<font style=font-family:宋体 face=宋体>文件和文件夹缩略图
+<br>-1：如果打过</font>Windows<font style=font-family:宋体 face=宋体>补丁，允许显示文件夹缩略图。不显示</font>WMF<font style=font-family:宋体 face=宋体>文件，必须手工修改选项以显示</font>WMF<font style=font-family:宋体 face=宋体>。</font><font style=font-family:宋体 face=宋体>由于一个严重的</font>Windows<font style=font-family:宋体 face=宋体>安全漏洞，默认禁用</font>WMF<font style=font-family:宋体 face=宋体>文件。</font></font></p><font style=font-family:宋体 face=宋体>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">x64DisableRedirection=0</span><font style=font-family:宋体 face=宋体>1：禁止在64位windows中将windows\system32重定向到windows\syswow64。可能有不好的副作用，如插件不能工作。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">x64Menu=</span><font style=font-family:宋体 face=宋体>在关联菜单中显示“x64”子菜单（64位版本则是“x32”子菜单），仅32位系统中默认值才是1。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">X64WaitTime=15</span><font style=font-family:宋体 face=宋体>64位Windows中，等待tcmdx64生成X64子菜单的最长时间，超过则TC提示出错信息。注意这个数值不包括启动tcmdx64.exe的时间。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">XPMoveMethod=</span><font style=font-family:宋体 face=宋体>1：同一驱动器内移动文件时，使用目标文件夹的权限
+<br>2：与1类似，但在移动文件夹时，里面所有文件和子文件夹的权限也变为目标文件夹的权限
+<br>0：保留文件本身权限
+<br>默认值：XP：1，其他系统：0</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">XPMoveMethodAdmin=1</span><font style=font-family:宋体 face=宋体>与XPMoveMethod相同，但用于通过tcmadmin.exe“以管理员身份”移动文件。<br>默认值总是1。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ZipMagic=0</span><font style=font-family:宋体 face=宋体>打开</font>zip<font style=font-family:宋体 face=宋体>时忽略</font>zipmagic<font style=font-family:宋体 face=宋体>检测</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[shortcuts]</span><font style=font-family:宋体 face=宋体>定义按键序列，替换默认快捷键</font></p>
+<p class=Standard--- style=margin-left:170.10pt;text-indent:-170.10pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CAS+F2=cm_renameonly</span><font style=font-family:宋体 face=宋体>本例中，</font>Ctrl+Alt+Shift+F2 <font style=font-family:宋体 face=宋体>调用内部功能</font>cm_renameonly<font style=font-family:宋体 face=宋体>。<br>(C=Ctrl，A=Alt，S=Shift)</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[shortcutswin]</span><font style=font-family:宋体 face=宋体>与[shortcuts]相同，但快捷键需附加Win键。</font></p>
+<p class=Standard--- style=margin-left:170.10pt;text-indent:-170.10pt>&nbsp;</p>
+<p class=Standard--- style=margin-left:170.10pt;text-indent:-170.10pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[packerplugins]</span><font style=font-family:宋体 face=宋体>列出所有已配置的压缩程序插件</font> (<font style=font-family:宋体 face=宋体>见</font> <a href=https://xbeta.info/tc-help/totalcmd/dlg_configpack.htm><font style=font-family:宋体 face=宋体>配置</font> - <font style=font-family:宋体 face=宋体>压缩程序</font></a>)</p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">bz2=27,c:\totalcmd\bzip2dll.dll</span><font style='font-family:"MS Sans Serif"' face="MS Sans Serif">bzip2</font><font style=font-family:宋体 face=宋体>压缩程序插件。</font><font style='font-family:"MS Sans Serif"' face="MS Sans Serif">27 </font><font style=font-family:宋体 face=宋体>是所有</font><font style='font-family:"MS Sans Serif"' face="MS Sans Serif">DLL</font><font style=font-family:宋体 face=宋体>功能之和：
+<br>1：能创建新压缩包<br>2：能修改已有压缩包<br>4：能在单个压缩包中处理多个文件
+<br>8：能删除压缩包中的文件<br>16：支持选项对话框<br>32：支持内存中压缩
+<br>64：按文件内容检测压缩包类型<br>128：允许在压缩包中搜索文本
+<br>256：回车不打开压缩包，必须按Ctrl+PgDn<br>512：支持加密
+<br>不要自己加这些数字，</font><font style='font-family:"MS Sans Serif"' face="MS Sans Serif">Total Commander</font><font style=font-family:宋体 face=宋体>将在第一次加载</font><font style='font-family:"MS Sans Serif"' face="MS Sans Serif">DLL</font><font style=font-family:宋体 face=宋体>时添加数字。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[Alias]</span><font style=font-family:宋体 face=宋体>配置 - 其他 定义的命令别名</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[AllResolutions]</span><font style=font-family:宋体 face=宋体>ResolutionSpecific=0时使用。参见 <b>[1024x768 (10x20)]</b></font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[Associations]</span><font style=font-family:宋体 face=宋体>可以设置Total Commander内部专用的文件关联，优先于操作系统的设置。主要用于U盘上运行程序。</font></p>
+<p class=Standard--- style=margin-left:170.10pt;text-indent:-170.10pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Filter1=*.txt</span><font style=font-family:宋体 face=宋体>用户定义的第一个文件关联过滤规则。规则按数字顺序依次匹配，直至找到匹配项。</font></p>
+<p class=Standard--- style=margin-left:170.10pt;text-indent:-170.10pt><span style="margin-left=-170pt;text-indent=0pt;">Filter1_open=""%windir%\notepad.exe" "%1""</span></p>
+<p class=Standard--- style=margin-left:170.10pt;text-indent:-170.10pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">&nbsp;</span><font style=font-family:宋体 face=宋体>本类文件的默认动作（open），用户按回车键后调用。动作和规则名之间以下划线“_”分隔。</font></p>
+<p class=Standard--- style=margin-left:170.10pt;text-indent:-170.10pt><span style="margin-left=-170pt;text-indent=0pt;">Filter1_View=""%commander_path%\totalcmd.exe" /S=L "%1""</span></p>
+<p class=Standard--- style=margin-left:170.10pt;text-indent:-170.10pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">&nbsp;</span><font style=font-family:宋体 face=宋体>显示在右键关联菜单的其它动作（本例是View）</font></p>
+<p class=Standard--- style=margin-left:170.10pt;text-indent:-170.10pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Filter1.icon=notepad.exe,-1</span><font style=font-family:宋体 face=宋体>定义第一组文件的图标，负数表示图标索引，正数表示图标的资源编号。</font></p>
+<p class=Standard--- style=margin-left:170.10pt;text-indent:-170.10pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Filter2=*.ini</span><font style=font-family:宋体 face=宋体>用户定义的第二个过滤规则</font></p>
+<p class=Standard--- style=margin-left:170.10pt;text-indent:-170.10pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">etc.</span><font style=font-family:宋体 face=宋体> </font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[1024x768 
+ (10x20)]</span><font style=font-family:宋体 face=宋体>分辨率相关数据</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">x=</span>Total 
+ Commander<font style=font-family:宋体 face=宋体>窗口位置（</font>X<font style=font-family:宋体 face=宋体>坐标）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">y=</span>Y<font style=font-family:宋体 face=宋体>坐标</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">dx=</span><font style=font-family:宋体 face=宋体>宽度</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">dy=</span><font style=font-family:宋体 face=宋体>高度</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Divider=500</span><font style=font-family:宋体 face=宋体>窗口分隔条的位置，千分数</font>(0<font style=font-family:宋体 face=宋体>～</font>1000)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">DividerComments=500</span><font style=font-family:宋体 face=宋体>文件说明显示方式</font>(Ctrl+Shift+F2)<font style=font-family:宋体 face=宋体>下的窗口分隔条位置，千分数</font>(0<font style=font-family:宋体 face=宋体>～</font>1000) </p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">DividerQuickView=500</span><font style=font-family:宋体 face=宋体>显示快速查看窗口</font>(CTRL+Q)<font style=font-family:宋体 face=宋体>时窗口分隔条位置，千分数。两个分隔条（快速查看窗口打开和未打开）可以分别设置：在相应模式下选择</font>'<font style=font-family:宋体 face=宋体>保存位置</font>'<font style=font-family:宋体 face=宋体>。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">FontCharset=1</span><font style=font-family:宋体 face=宋体>列表窗口的字体字符集</font>(Western, Cyrillic <font style=font-family:宋体 face=宋体>等</font>)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">FontCharsetWindow=1</span><font style=font-family:宋体 face=宋体>主窗口字体字符集</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Fontsize=8</span><font style=font-family:宋体 face=宋体>字体大小</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Fontname=Helv</span><font style=font-family:宋体 face=宋体>字体</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">FontWeight=700</span><font style=font-family:宋体 face=宋体>字体加粗</font> (400=<font style=font-family:宋体 face=宋体>正常</font>, 700=<font style=font-family:宋体 face=宋体>黑体</font>)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Fontsizewindow=</span><font style=font-family:宋体 face=宋体>主窗口字体大小</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">FontnameWindow=</span><font style=font-family:宋体 face=宋体>主窗口字体</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">FontWeightWindow=</span><font style=font-family:宋体 face=宋体>主窗口字体加粗</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Iconsize=10</span>16<font style=font-family:宋体 face=宋体>位版本的图标大小</font>(points)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Iconsize32=16</span><font style=font-family:宋体 face=宋体>32位和64位版本的图标大小</font>(<font style=font-family:宋体 face=宋体>像素</font>)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">maximized=0</span>0=<font style=font-family:宋体 face=宋体>正常</font>, 1=<font style=font-family:宋体 face=宋体>最大化</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Tabstops=104,109,158,58,374,93</span><font style=font-family:宋体 face=宋体>制表符位置</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CmdSel*=</span><font style=font-family:宋体 face=宋体>命令选择窗口的坐标和其他设置</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Compare*=</span><font style=font-family:宋体 face=宋体>文件比较窗口的</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Connect*=</span><font style=font-family:宋体 face=宋体>连接对话框窗口的</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CustColumn*=</span><font style=font-family:宋体 face=宋体>自定义列设置对话框的</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">DriveSel*=</span><font style=font-family:宋体 face=宋体>搜索文件的选择驱动器对话框的</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">MenuChange*=</span><font style=font-family:宋体 face=宋体>开始菜单对话框的</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Print*=</span><font style=font-family:宋体 face=宋体>打印预览窗口的</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Rename*=</span><font style=font-family:宋体 face=宋体>重命名对话框</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Search*=</span><font style=font-family:宋体 face=宋体>查找文件对话框</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Sync*=</span><font style=font-family:宋体 face=宋体>同步文件夹对话框</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">TreeDlg*=</span><font style=font-family:宋体 face=宋体>文件夹树对话框</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[left]</span><font style=font-family:宋体 face=宋体>左侧窗口</font> (<font style=font-family:宋体 face=宋体>右侧窗口有相同设置项</font>)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">path=D:\TPW\</span><font style=font-family:宋体 face=宋体>上次的活动文件夹</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ShowAllDetails=1</span>0=<font style=font-family:宋体 face=宋体>仅显示文件名</font>, 1=<font style=font-family:宋体 face=宋体>所有数据</font>, 2=<font style=font-family:宋体 face=宋体>文件夹树</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">show=1</span><font style=font-family:宋体 face=宋体>1=所有文件，2=仅程序文件，3=用户自定义</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SpecialView=</span><font style=font-family:宋体 face=宋体>自定义列视图标志，覆盖</font>show=<font style=font-family:宋体 face=宋体>选项。保存在单独变量中，以避免旧版本</font>Total 
+ Commander<font style=font-family:宋体 face=宋体>产生问题。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">sortorder=0</span><font style=font-family:宋体 face=宋体>排序 0=按名字，1=扩展名，2=大小，3=日期，4=不排序</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">customsortorder=0</span><font style=font-family:宋体 face=宋体>按自定义列排序（仅自定义列显示模式），100=第1个自定义列，101=第2个</font>…<font style=font-family:宋体 face=宋体>等等。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">negative Sortorder=0</span><font style=font-family:宋体 face=宋体>倒序排列</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">AddSortOrders=</span><font style=font-family:宋体 face=宋体>附加的排序关键字。例如: 1,-3,2 代表还按照第1列升序，第3列降序，第2列升序来排序 (列从1开始计数)。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">userspec=*.wav</span><font style=font-family:宋体 face=宋体>用户自定义的文件类型</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[Colors]</span><font style=font-family:宋体 face=宋体>主窗口颜色设置</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">InverseCursor=0</span><font style=font-family:宋体 face=宋体>光标显示为实心矩形</font> (1)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">InverseSelection=0</span><font style=font-family:宋体 face=宋体>选中文件显示为实心矩形</font>(1)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">BackColor=16777215</span><font style=font-family:宋体 face=宋体>背景颜色</font>(RGB：red+256*green+65536*blue，每个数值的范围是0～255，或形式为$BBGGRR的十六进制数值)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ForeColor=-1</span><font style=font-family:宋体 face=宋体>前景颜色</font> (-1=<font style=font-family:宋体 face=宋体>默认</font>)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">MarkColor=255</span><font style=font-family:宋体 face=宋体>标记颜色</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CursorColor=8421504</span><font style=font-family:宋体 face=宋体>光标颜色</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CursorText=16777215</span><font style=font-family:宋体 face=宋体>光标文字颜色</font> (<font style=font-family:宋体 face=宋体>仅适用于反色光标</font>)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ActiveTitle=</span><font style=font-family:宋体 face=宋体>活动窗口地址栏的颜色</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ActiveTitleText=</span><font style=font-family:宋体 face=宋体>活动窗口地址栏上的文字颜色</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">InactiveTitle=</span><font style=font-family:宋体 face=宋体>非活动窗口地址栏颜色</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">InactiveTitleText=</span><font style=font-family:宋体 face=宋体>非活动窗口地址栏上的文字颜色</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ThumbnailFrame=-1</span><font style=font-family:宋体 face=宋体>设置缩略图周围边框的颜色：RGB值，或-1=默认，-2=隐藏</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">TreeLineColor=-1</span><font style=font-family:宋体 face=宋体>设置文件窗口中的文件夹树，单独的文件夹树，Alt+F10调出的文件夹树，FTP连接对话框中的树型列表的连接线的颜色。数值: rgb值，或-1=默认，-2=隐藏</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">TreeTriangles=-1</span><font style=font-family:宋体 face=宋体>展开/折叠文件夹树的图标：<br>0：显示[+]<br>1=如果支持则显示三角形图标<br>-1=让TC决定</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ColorFilterN=</span><font style=font-family:宋体 face=宋体>文件选择类型的搜索字符串，如*.txt</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ColorFilterNColor=</span><font style=font-family:宋体 face=宋体>文件选择类型的颜色</font>(RGB：red+256*green+65536*blue)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CompareText</span><font style=font-family:宋体 face=宋体>比较文件，文本方式：差异的颜色</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CompareTextSel</span><font style=font-family:宋体 face=宋体>比较文件，文本方式：选中文本的颜色</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CompareBinary</span><font style=font-family:宋体 face=宋体>比较文件，二进制方式：差异的颜色</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CompareBinarySel</span><font style=font-family:宋体 face=宋体>比较文件，二进制方式：选中文本的颜色</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CompareDifferenceBack=-2</span><font style=font-family:宋体 face=宋体>有差异行的背景颜色：
+<br>-1=与无差异行的背景色相同
+<br>-2=略微暗些/亮些（取决于背景色）
+<br>其他=RGB值</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CompareNormalBack=-1</span><font style=font-family:宋体 face=宋体>无差异行的背景颜色。-1=默认：COLOR_WINDOW</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CompareNormalText=-1</span><font style=font-family:宋体 face=宋体>无差异行的文字颜色。-1=默认：COLOR_WINDOWTEXT</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CompareSelBack=-1</span><font style=font-family:宋体 face=宋体>选中文字的背景颜色。-1=默认：COLOR_HIGHLIGHT</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CompareSelText=-1</span><font style=font-family:宋体 face=宋体>选中文字的文字颜色。-1=默认：COLOR_HIGHLIGHTTEXT</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SyncSelBack=-1</span><font style=font-family:宋体 face=宋体>同步文件夹对话框中选中行的背景颜色。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[IgnoreMenuExtensions]</span><font style=font-family:宋体 face=宋体>使用x64（64位系统）的关联菜单时被排除的右键菜单扩展项</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">0=Extension Name1</span></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">1=Extension Name2</span></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[Layout]</span><font style=font-family:宋体 face=宋体>本节设置决定</font>Total Commander<font style=font-family:宋体 face=宋体>用户界面中的哪部分显示。除了以下选项，其它所有选项可在主设置对话框中修改：</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">TabHeaderThemed=1</span><font style=font-family:宋体 face=宋体>0: 关闭标题栏主题</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">TabHeaderBoldArrow=1</span><font style=font-family:宋体 face=宋体>0: 标题栏的箭头不加粗显示（默认值：与TabHeaderThemed相同）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[Packer]</span><font style=font-family:宋体 face=宋体>关于压缩程序的设置</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ZIP=c:\utils\zip\pkzip.exe</span>pkzip<font style=font-family:宋体 face=宋体>的路径</font>/<font style=font-family:宋体 face=宋体>文件名</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">UnZIP=c:\utils\zip\pkunzip.exe</span>pkunzip<font style=font-family:宋体 face=宋体>的路径</font>/<font style=font-family:宋体 face=宋体>文件名</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ACE=c:\utils\arj\ace.exe</span>ACE<font style=font-family:宋体 face=宋体>的路径</font>/<font style=font-family:宋体 face=宋体>文件名</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ARJ=c:\utils\arj\arj.exe</span>ARJ<font style=font-family:宋体 face=宋体>的路径</font>/<font style=font-family:宋体 face=宋体>文件名</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">LHA=c:\utils\lha\lha.exe</span>LHA<font style=font-family:宋体 face=宋体>的路径</font>/<font style=font-family:宋体 face=宋体>文件名</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">RAR=c:\utils\rar\rar.exe</span>RAR<font style=font-family:宋体 face=宋体>的路径</font>/<font style=font-family:宋体 face=宋体>文件名</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">UC2=c:\utils\uc2\uc.exe</span>UC2<font style=font-family:宋体 face=宋体>的路径</font>/<font style=font-family:宋体 face=宋体>文件名</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ARJlongnames=0</span><font style=font-family:宋体 face=宋体>压缩时传递给</font>ARJ<font style=font-family:宋体 face=宋体>长文件名</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">DefPlugin=cab</span><font style=font-family:宋体 face=宋体>上次使用的压缩程序插件</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ExpertMode=1</span><font style=font-family:宋体 face=宋体>1：回车后直接运行压缩包中的文件；0：先显示属性页</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ExtractPathInZIP=1</span><font style=font-family:宋体 face=宋体>解压文件时同时包含它的路径</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">InternalUnzip=1</span><font style=font-family:宋体 face=宋体>使用内置</font>unzip</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">InternalUnarj=1</span><font style=font-family:宋体 face=宋体>使用内置</font>unARJ</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">InternalUnlzh=1</span><font style=font-family:宋体 face=宋体>使用内置</font>unLHA</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">InternalUnace=1</span><font style=font-family:宋体 face=宋体>使用内置</font>unACE</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">InternalUnrar=1</span><font style=font-family:宋体 face=宋体>使用内置</font>unRAR</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">InternalZIP=1</span><font style=font-family:宋体 face=宋体>使用内置</font>ZIP<font style=font-family:宋体 face=宋体>压缩程序</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">InternalZipRate=6</span><font style=font-family:宋体 face=宋体>内置</font>ZIP<font style=font-family:宋体 face=宋体>压缩程序的压缩比例(0=不压缩，1=最快，9=最高)</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">InternalzipTemp=c:\temp</span><font style=font-family:宋体 face=宋体>内置</font>ZIP<font style=font-family:宋体 face=宋体>压缩程序的临时路径</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">LastUsedPacker=1</span><font style=font-family:宋体 face=宋体>上次使用的压缩程序</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">LinuxCompatible=1</span><font style=font-family:宋体 face=宋体>1：创建</font>Linux<font style=font-family:宋体 face=宋体>兼容的</font>TAR<font style=font-family:宋体 face=宋体>文件<br>0：创建</font>SunOS<font style=font-family:宋体 face=宋体>兼容的</font>TAR<font style=font-family:宋体 face=宋体>文件</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">LzmaAllowed=0</span><font style=font-family:宋体 face=宋体>1：ZIP压缩程序：允许LZMA压缩方式（不推荐，需要WinZip &gt;=12 才能解压）。如果启用，你可以为LZMA选择压缩率10。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">NoDelete=0</span><font style=font-family:宋体 face=宋体>1：不删除解压后</font>CRC<font style=font-family:宋体 face=宋体>有错的文件</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">OpenPartial=0</span><font style=font-family:宋体 face=宋体>1：打开不完整的</font>ZIP<font style=font-family:宋体 face=宋体>文件，如部分下载的</font>ZIP<font style=font-family:宋体 face=宋体>文件</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">PluginOverrideZip=0</span><font style=font-family:宋体 face=宋体>1：允许压缩程序插件关联到ZIP格式<br>0：内部zip解压程序始终优先</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">RemovableInTemp=0</span><font style=font-family:宋体 face=宋体>1：Total Commander按如下方法修改可移动驱动器上的</font>ZIP<font style=font-family:宋体 face=宋体>文件：</font><font style=font-family:宋体 face=宋体><br>在</font>TEMP<font style=font-family:宋体 face=宋体>文件夹创建新压缩包，删除旧文件，复制新文件到可移动驱动器
+<br>0：对于软盘与</font>1<font style=font-family:宋体 face=宋体>相同，对于容量更大的介质</font>(ZIP，JAZ)<font style=font-family:宋体 face=宋体>，直接在驱动器上工作，不使用</font>TEMP<font style=font-family:宋体 face=宋体>文件夹</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">UnZIPOverwrite=0</span><font style=font-family:宋体 face=宋体>解压文件时总替换同名文件</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">UnZIPSeparateSubdirs=-1</span><font style=font-family:宋体 face=宋体>保存选项“将各压缩包分别解压到同名的子文件夹中”的状态。
+<br>0：禁用，但保存选项的改变
+<br>1：启用，保存选项的改变
+<br>-1：禁用，不保存选项的改变（默认）
+<br>-2：启用，不保存选项的改变
+<br>-3：类似于-2，但仅适用于选中一个以上压缩包时</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">VerifyZIP=1</span>1=<font style=font-family:宋体 face=宋体>压缩后测试</font>ZIP<font style=font-family:宋体 face=宋体>文件，0=不测试</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">WarnTooBig=1</span><font style=font-family:宋体 face=宋体>如果压缩后文件大于2GB，提示某些压缩程序可能无法解压这样的文件</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">WipeEncrypted=1</span><font style=font-family:宋体 face=宋体>如果一个加密压缩包内的文件被查看/编辑/启动/比较，TEMP文件夹内临时存放未加密的文件。为安全起见，这些临时文件默认在删除前用零覆盖。如果WipeEncrypted=0，可关闭该功能以节省时间。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Zip83Name=0</span><font style=font-family:宋体 face=宋体>压缩文件时使用</font>8.3<font style=font-family:宋体 face=宋体>文件名，不使用长文件名。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ZipAES=0</span><font style=font-family:宋体 face=宋体>设置加密方法：<br>
+0: ZIP2.0加密<br>1: AES（128位密钥）<br>2: AES（192位密钥）<br>3: AES（256位密钥）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ZipAnsiNames=0</span><font style=font-family:宋体 face=宋体>1：zip中以ANSI (Windows) 字符集保存文件名，不用OEM (DOS)字符集。注意在这种情况下有些解压程序无法处理带重音符的压缩包。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ZIPDirectoryOfFile=1</span><font style=font-family:宋体 face=宋体>压缩时连同子文件夹名称</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ZIPlikeDirectory=1</span><font style=font-family:宋体 face=宋体>将压缩包按文件夹操作</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">zipnt=0</span><font style=font-family:宋体 face=宋体>使用</font>Info-zip for NT (0 = <font style=font-family:宋体 face=宋体>不使用，</font>1 = 
+ Zip-NT 2.0.1 (Total Commander<font style=font-family:宋体 face=宋体>打过补丁</font>)，2 = <font style=font-family:宋体 face=宋体>未识别版本</font>)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ZIPRecurseSubdirs=1</span><font style=font-family:宋体 face=宋体>循环压缩子文件夹</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ZipSetDateToNewest=0</span><font style=font-family:宋体 face=宋体>使用内置</font>ZIP<font style=font-family:宋体 face=宋体>压缩程序压缩时，把压缩包日期设为</font>zip<font style=font-family:宋体 face=宋体>中最新文件的日期。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ZipUnicode=0</span><font style=font-family:宋体 face=宋体>决定如何在ZIP包内压缩Unicode文件名：<br>
+0: 每次遇到Unicode文件名时都询问<br>1: 将Unicode文件名保存为UTF-8(Pkzip 4.5/Winzip 11.2 方式)<br>2: 如有Unicode字符则全部保存为UTF-8
+<br>3: 如有非英语字符则全部保存为UTF-8<br>4: 将Unicode文件名另存到扩展区域(Info-Zip 方式)
+<br>5: 将非英语字符文件名另存到扩展区域<br>6: 将Unicode字符保存为问号</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style=font-weight:bold>[Buttonbar]</span></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">BarLimitLines=0</span><font style=font-family:宋体 face=宋体>限定工具栏行数。0代表不限制。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Buttonbar=d:\tpw\exetpu\chris.bar</span><font style=font-family:宋体 face=宋体>默认工具栏</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Buttonheight=29</span><font style=font-family:宋体 face=宋体>工具栏的高度</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">FlatIcons=1</span><font style=font-family:宋体 face=宋体>1：图标不带</font>3d<font style=font-family:宋体 face=宋体>效果 0：带</font>3d<font style=font-family:宋体 face=宋体>效果</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">PopupIconSize=</span><font style=font-family:宋体 face=宋体>将.bar文件显示为菜单时，下拉菜单中图标的大小。默认值：与当前显示的工具栏上图标大小相同。</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">PopupOverlay=1</span><font style=font-family:宋体 face=宋体>1：打开子菜单的按钮的图标上叠加显示一个小箭头图标</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SmallIcons=1</span><font style=font-family:宋体 face=宋体>1：使用小的</font>16x16<font style=font-family:宋体 face=宋体>图标 0：图标大小用户自定义</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SmallIconSize=16</span><font style=font-family:宋体 face=宋体>SmallIcons=1时图标的大小</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">XPstyle=1</span><font style=font-family:宋体 face=宋体>使用主题绘制按钮（XP或后续系统）</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[Command 
+ line history]</span><font style=font-family:宋体 face=宋体>曾用命令列表</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">0=regedit</span>0 
+ <font style=font-family:宋体 face=宋体>上一次的命令</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>1=calc</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[DriveHints]</span><font style=font-family:宋体 face=宋体>用于驱动器选择框的用户自定义驱动器描述</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">E=ZIP drive</span><font style=font-family:宋体 face=宋体>每个驱动器一行，包含驱动器符和说明</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[Lister]</span>lister<font style=font-family:宋体 face=宋体>的设置</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Maximized=1</span><font style=font-family:宋体 face=宋体>全屏</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">x=54</span><font style=font-family:宋体 face=宋体>位置</font> (x)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">y=-1</span><font style=font-family:宋体 face=宋体>位置</font> (y)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">dx=587</span><font style=font-family:宋体 face=宋体>宽度</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">dy=483</span><font style=font-family:宋体 face=宋体>高度</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">TextWidth=81</span><font style=font-family:宋体 face=宋体>文本方式的宽度</font> (<font style=font-family:宋体 face=宋体>字符数</font>)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">binwidth=75</span><font style=font-family:宋体 face=宋体>二进制显示的宽度</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">BmpStartup=1</span><font style=font-family:宋体 face=宋体>1：始终尝试加载和显示图形 0：加载为二进制文件，如果用户选择‘图像’方式，显示为图形</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">AutoRotate=1</span><font style=font-family:宋体 face=宋体>根据从相机得到的EXIF数据自动旋转JPG图片</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Caret=1</span><font style=font-family:宋体 face=宋体>显示插入标记（文本光标），例如，为了用键盘选择文本</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">CenterBitmap=0</span><font style=font-family:宋体 face=宋体>在Lister中居中显示位图</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Codepage=-1</span><font style=font-family:宋体 face=宋体>用户从“编码”菜单自选的代码页。-1：当前字体确定的代码页</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">FgColor=</span><font style=font-family:宋体 face=宋体>文本颜色。默认是windows的默认文本颜色。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">BgColor=</span><font style=font-family:宋体 face=宋体>背景颜色。默认是windows的默认背景颜色。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">FgSelColor=</span><font style=font-family:宋体 face=宋体>选定文本的前景色。默认是背景色。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">BgSelColor=</span><font style=font-family:宋体 face=宋体>选定文本的背景色。默认是文本颜色。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">LinkColor=8388608</span><font style=font-family:宋体 face=宋体>链接颜色。默认深蓝色(128*65536)</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Font1=Arial,-15,b</span><font style=font-family:宋体 face=宋体>字体</font> (<font style=font-family:宋体 face=宋体>如果不使用默认字体</font>)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>Font2=Arial,-15,b</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>Font3=Arial,-15,b</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Font4=Courier New,18,b </span><font style=font-family:宋体 face=宋体>打印机字体 (等宽)</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Font5=Arial,20 </span><font style=font-family:宋体 face=宋体>打印机字体</font> (<font style=font-family:宋体 face=宋体>不等宽</font>)</p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">GifMinDelay=80 </span><font style=font-family:宋体 face=宋体>（动画GIF）各帧之间的最小延迟时间，单位是毫秒</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">HTMLAsText=1</span><font style=font-family:宋体 face=宋体>将</font>HTML<font style=font-family:宋体 face=宋体>自动转换为带</font><font style=font-family:宋体 face=宋体>链接的文本</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">IView=1</span><font style=font-family:宋体 face=宋体>使用</font>Irfanview/Xnview<font style=font-family:宋体 face=宋体>加载其他图形文件，如</font>JPG<font style=font-family:宋体 face=宋体>等。</font></p>
+ 
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">IviewAdditionalTypes=</span><font style=font-family:宋体 face=宋体>将传给</font>Irfanview/Xnview<font style=font-family:宋体 face=宋体>转换的其他文件类型</font><font style=font-family:宋体 face=宋体>如: </font><br>*.xyz *.abc<br>
+<font style=font-family:宋体 face=宋体>如果此处列出了某种已支持的文件类型，例如 *.tif，则该类文件不再按内容检测其类型。即使没有本选项，以下文件类型也会送到Irfanview/Xnview：</font>
+<br>fif, tga, tif, tiff, pcx, ani, acr, cam, clp, cpt, cur, dcx, dib, eps, g3, iff, img, lbm, lwf, pbm, pgm, pcd, ppm, psd, psp, ps, ras, rle, sfw, iw44, djvu, rgb, dcm, acr, wbmp, mos, kdc, xbm, xpm, swf, fpx, sgi, jp2, j2k
+</p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">IViewPath=</span>Irfanview/Xnview 
+ EXE <font style=font-family:宋体 face=宋体>文件的路径。</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">LinkBraces=1</span>HTML<font style=font-family:宋体 face=宋体>文本：在花括号</font>{}<font style=font-family:宋体 face=宋体>中显示链接</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Multimedia=1</span><font style=font-family:宋体 face=宋体>1：始终尝试加载和播放声音和视频文件<br>0：加载为二进制文件，用户选择‘图像</font>/<font style=font-family:宋体 face=宋体>多媒体’方式后播放</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">RTF=1</span><font style=font-family:宋体 face=宋体>自</font><font style=font-family:宋体 face=宋体>动检测</font>RTF<font style=font-family:宋体 face=宋体>文件</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">SearchGoBack=3</span><font style=font-family:宋体 face=宋体>查找时</font><font style='font-family:"MS Sans Serif"' face="MS Sans Serif">Lister</font><font style=font-family:宋体 face=宋体>在搜索到的文本上方显示几行</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">ShrinkBitmap=0</span><font style=font-family:宋体 face=宋体>1：缩小</font>/<font style=font-family:宋体 face=宋体>放大图形以适应窗口大小<br>
+2: 仅缩小大图，但不放大小图</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Startup=0</span><font style=font-family:宋体 face=宋体>保存</font>lister<font style=font-family:宋体 face=宋体>打开后使用的显示方式和字体：<br>0=自动，1=文本，2=二进制，3=十六进制
+<br>0=自动，16=ansi，32=ascii，48=不等宽</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">TabWidth=8</span><font style=font-family:宋体 face=宋体>制表符宽度</font>(<font style=font-family:宋体 face=宋体>默认：</font>8<font style=font-family:宋体 face=宋体>字符</font>)</p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Uniscribe=1</span><font style=font-family:宋体 face=宋体>使用Uniscribe在查看器中绘制Unicode和非本国代码页文字。Uniscribe是一种可正确处理从右到左文字（阿拉伯语，希伯来语）的组件。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">UserEncodings=</span><font style=font-family:宋体 face=宋体>用户定义的编码，格式为：编码名称 (编码数字)。多个编码以竖线|分隔。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">Wrap=1</span><font style=font-family:宋体 face=宋体>打开自动换行</font>(1) <font style=font-family:宋体 face=宋体>或关闭</font> (0)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">LeftMargin=200</span><font style=font-family:宋体 face=宋体>打印的页边距</font> (1/10 <font style=font-family:宋体 face=宋体>毫米</font>)</p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt>RightMargin=0</p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt>TopMargin=200</p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt>BottomMargin=200</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[Confirmation]</span><font style=font-family:宋体 face=宋体>确认</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">deleteDirs=1</span><font style=font-family:宋体 face=宋体>删除非空文件夹前询问</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">OverwriteFiles=1</span><font style=font-family:宋体 face=宋体>替换文件前询问</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">OverwriteHidSys=1</span><font style=font-family:宋体 face=宋体>替换</font>/<font style=font-family:宋体 face=宋体>删除</font> <font style=font-family:宋体 face=宋体>隐藏</font>/<font style=font-family:宋体 face=宋体>系统文件前询问</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">OverwriteReadonly=1</span><font style=font-family:宋体 face=宋体>替换</font>/<font style=font-family:宋体 face=宋体>删除</font> <font style=font-family:宋体 face=宋体>只读文件前询问</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">MouseActions=1</span><font style=font-family:宋体 face=宋体>拖放时询问</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[ContentPlugins]</span><font style=font-family:宋体 face=宋体>已安装的内容插件</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">0=&lt;pluginpath&gt;</span><font style=font-family:宋体 face=宋体>第一个插件的路径</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">0_detect=&lt;detect string&gt;</span><font style=font-family:宋体 face=宋体>第一个插件的检测字符串（可选）。TC用它检测插件是否支持一个文件，而无需加载插件。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[CustomFields]</span><font style=font-family:宋体 face=宋体>保存的自定义列设置</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[CustomFields_PluginName]</span><font style=font-family:宋体 face=宋体>保存的文件系统插件的自定义列设置</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[Extensions]</span>ALT+F3<font style=font-family:宋体 face=宋体>的关联</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">pif=c:\windows\pifedit.exe 
+ ^.pif</span><font style=font-family:宋体 face=宋体>例如：</font>Pif<font style=font-family:宋体 face=宋体>编辑器关联到</font>*.pif</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[FileSystemPlugins]</span><font style=font-family:宋体 face=宋体>已安装的文件系统插件</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">&lt;pluginname&gt;=&lt;pluginpath&gt;</span><font style=font-family:宋体 face=宋体>文件系统插件的路径（按插件名字保存）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[HintsCustomField]</span><font style=font-family:宋体 face=宋体>显示在文件提示窗口中的自定义项目</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[LeftHistory], [RightHistory]</span><font style=font-family:宋体 face=宋体>左右窗口曾访问过的文件夹列表。如果SaveHistory=0，不保存列表。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[LeftTabs], [RightTabs]</span><font style=font-family:宋体 face=宋体>分别是左右窗口的文件夹标签配置。活动文件夹标签的配置不保存在这里，而是在[left]和[right]。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[ListerPlugins]</span><font style=font-family:宋体 face=宋体>已安装的查看程序插件</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">0=&lt;pluginname&gt;</span><font style=font-family:宋体 face=宋体>第一个插件的路径</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">0=&lt;detect string&gt;</span><font style=font-family:宋体 face=宋体>第一个插件的检测字符串（可选）。TC用它检测插件是否支持一个文件，而无需加载插件。</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[MkDirHistory]</span><font style=font-family:宋体 face=宋体>曾创建过的文件夹（F7）的列表</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[SyncOptions]</span><font style=font-family:宋体 face=宋体>为“同步文件夹”保存的选项</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">&lt;name&gt;_L=D:\</span><font style=font-family:宋体 face=宋体>左侧路径</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">&lt;name&gt;_R=E:\</span><font style=font-family:宋体 face=宋体>右侧路径</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">&lt;name&gt;_Wcs=*.*</span><font style=font-family:宋体 face=宋体>通配符</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">&lt;name&gt;_Flags=11|63|-8</span><font style=font-family:宋体 face=宋体>选项。3段的含义：<br>
+第1段: 比较的选项。以下之和：<br>
+&nbsp;&nbsp;1: 子文件夹<br>
+&nbsp;&nbsp;2: 比较文件内容<br>
+&nbsp;&nbsp;4: 忽略日期<br>
+&nbsp;&nbsp;8: 备份左边文件<br>
+第2段: 显示选项。以下之和：<br>
+&nbsp;&nbsp;1: 要从左边复制到右边的文件<br>
+&nbsp;&nbsp;2: 相同的文件<br>
+&nbsp;&nbsp;4: 不同的文件<br>
+&nbsp;&nbsp;8: 要从右边复制到左边的文件<br>
+&nbsp;&nbsp;16: 左右同名<br>
+&nbsp;&nbsp;32: 左右不同<br>
+第3段: 排序（负数代表反序）</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[Tabstops]</span><font style=font-family:宋体 face=宋体>文件窗口的制表符设置</font>(<font style=font-family:宋体 face=宋体>仅在当前分辨率相关的设置未存储时有效</font><font style=font-family:宋体 face=宋体>！</font>)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">0=90</span><font style=font-family:宋体 face=宋体>大小</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">1=93</span><font style=font-family:宋体 face=宋体>日期/时间</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">2=</span><font style=font-family:宋体 face=宋体>未使用</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">3=152</span><font style=font-family:宋体 face=宋体>属性</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">4=42</span><font style=font-family:宋体 face=宋体>扩展名</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">5=93</span><font style=font-family:宋体 face=宋体>注释</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">6=&lt;窗口宽度&gt;</span><font style=font-family:宋体 face=宋体>参考宽度</font> (<font style=font-family:宋体 face=宋体>用于</font>AdjustWidth=1<font style=font-family:宋体 face=宋体>时</font>)</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">AdjustWidth=1</span><font style=font-family:宋体 face=宋体>窗口大小变化时自动调整文件名的列宽</font></p>
+<p style=margin-top:0;margin-bottom:0>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[user]</span><font style=font-family:宋体 face=宋体>用户自定义菜单</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">menu1=Verz: Root 
+ of C</span><font style=font-family:宋体 face=宋体>标题</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">cmd1=cd c:\</span><font style=font-family:宋体 face=宋体>命令</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">param1=</span><font style=font-family:宋体 face=宋体>参数</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">path1=</span><font style=font-family:宋体 face=宋体>启动路径</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">iconic1=</span>1=<font style=font-family:宋体 face=宋体>启动后最小化</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="margin-left=-170pt;text-indent=0pt;width:170pt">key1=</span><font style=font-family:宋体 face=宋体>快捷键</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[attrplugin]</span><font style=font-family:宋体 face=宋体>属性对话框: 保存的插件选项</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[dirmenu]</span><font style=font-family:宋体 face=宋体>用户定义的常用文件夹列表</font>(CTRL+D)</p>
+<p><font style=font-family:宋体 face=宋体>子项与</font>[user]<font style=font-family:宋体 face=宋体>相同</font></p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[OverwriteCustomField]</span><font style=font-family:宋体 face=宋体>显示在替换对话框中的自定义项目设置</font></p>
+<p style=margin-top:0;margin-bottom:0>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[rename]</span><font style=font-family:宋体 face=宋体>保存的批量重命名的选项</font></p>
+<p style=margin-top:0;margin-bottom:0>&nbsp;</p>
+<p style=margin-left:169.75pt;text-indent:-169.75pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[Searches]</span><font style=font-family:宋体 face=宋体>保存的搜索对话框的选项</font></p>
+<p style=margin-top:0;margin-bottom:0>&nbsp;</p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[SearchName]</span><font style=font-family:宋体 face=宋体>这三节包含以前的搜索信息。</font></p>
+<p><span style=font-weight:bold>[SearchIn]</span></p>
+<p><span style=font-weight:bold>[SearchText]</span></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt>&nbsp;</p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[Selection]</span><font style=font-family:宋体 face=宋体>保存以前使用过的文件选择条件(按数字小键盘的+选择)</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt>&nbsp;</p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[SplitPerFile]</span><font style=font-family:宋体 face=宋体>保存文件 - 分割，以及创建多卷压缩包时用户自定义的大小</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt>&nbsp;</p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[RenameTemplates]&nbsp;</span><font style=font-family:宋体 face=宋体>批量重命名</font><font style=font-family:宋体 face=宋体>窗口的重命名规则历史记录</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt>&nbsp;</p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[RenameSearchFind]&nbsp;</span><font style=font-family:宋体 face=宋体>批量重命名工具中使用过的搜索字符串（用于搜索+替换）</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[RenameSearchReplace]&nbsp;</span><font style=font-family:宋体 face=宋体>批量重命名工具中使用过的替换字符串（用于搜索+替换）</font></p>
+<p style=margin-left:170.25pt;text-indent:-170.25pt>&nbsp;</p>
+<p class=Standard--- style=margin-left:170.25pt;text-indent:-170.25pt><span style="font-weight:bold;margin-left=-170pt;text-indent=0pt;width:170pt">[PrintDir]&nbsp;</span><font style=font-family:宋体 face=宋体>自动保存的打印对话框内的设置</font></p>
+</font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font><div><div class=_th-container>
+ <div class="_th-click-hover _item-input">
+ x1.00
+ </div>
+ <div class="_th-item _item-x2">&gt;</div>
+ <div class="_th-item _item-x-2">&lt;</div>
+ <div class="_th-item _item-xx2">&gt;&gt;</div>
+ <div class="_th-item _item-xx-2">&lt;&lt;</div>
+ <div class="_th-item _item-reset">O</div>
+</div>
+<div class="_th_cover-all-show-times _th_hidden">
+ <div class=_th_times>x1.00</div>
+</div></div>
